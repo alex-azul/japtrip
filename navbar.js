@@ -14,11 +14,11 @@ class NavigationBar {
         const navbarHTML = `
             <nav class="navbar">
                 <div class="nav-container">
-                    <a href="index.html" class="nav-logo">Japan Trip 2024</a>
+                    <a href="index.html" class="nav-logo">Viaje a Japón 2025</a>
                     <ul class="nav-menu" id="nav-menu">
-                        <li><a href="index.html" class="nav-link">Home</a></li>
-                        <li><a href="japan_itinerary.html" class="nav-link">Itinerary</a></li>
-                        <li><a href="japan_itinerary_map.html" class="nav-link">Map</a></li>
+                        <li><a href="index.html" class="nav-link">Inicio</a></li>
+                        <li><a href="japan_itinerary.html" class="nav-link">Itinerario</a></li>
+                        <li><a href="japan_itinerary_map.html" class="nav-link">Mapa</a></li>
                     </ul>
                     <button class="nav-toggle" id="nav-toggle">
                         <i class="fas fa-bars"></i>
@@ -59,6 +59,20 @@ class NavigationBar {
                     navbar.style.background = 'rgba(18, 18, 18, 0.95)';
                 }
             }
+        });
+
+        // Smooth scrolling for anchor links within the same page
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
         });
     }
 

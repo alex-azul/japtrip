@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Viaje a Japón 2024 - Tu Aventura Te Espera</title>
+    <title>Viaje a Japón 2025</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500,700&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="navbar.css">
     <style>
         /* --- Color Palette (Dark Mode) --- */
         :root {
@@ -41,82 +42,6 @@
             color: var(--color-text-primary);
             line-height: 1.6;
             overflow-x: hidden;
-        }
-
-        /* --- Navigation Bar --- */
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: var(--color-nav-bg);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            padding: 1rem 2rem;
-            transition: var(--transition);
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .nav-logo {
-            font-family: 'Rajdhani', sans-serif;
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--color-text-primary);
-            text-decoration: none;
-            letter-spacing: 1px;
-        }
-
-        .nav-logo:hover {
-            color: var(--color-accent-primary);
-        }
-
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-link {
-            color: var(--color-text-primary);
-            text-decoration: none;
-            font-weight: 500;
-            transition: var(--transition);
-            position: relative;
-        }
-
-        .nav-link:hover {
-            color: var(--color-accent-primary);
-        }
-
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--color-accent-primary);
-            transition: var(--transition);
-        }
-
-        .nav-link:hover::after {
-            width: 100%;
-        }
-
-        .nav-toggle {
-            display: none;
-            background: none;
-            border: none;
-            color: var(--color-text-primary);
-            font-size: 1.5rem;
-            cursor: pointer;
         }
 
         /* --- Hero Section --- */
@@ -301,30 +226,6 @@
 
         /* --- Responsive Design --- */
         @media (max-width: 768px) {
-            .nav-menu {
-                position: fixed;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: var(--color-nav-bg);
-                flex-direction: column;
-                padding: 2rem;
-                transform: translateY(-100%);
-                opacity: 0;
-                visibility: hidden;
-                transition: var(--transition);
-            }
-
-            .nav-menu.active {
-                transform: translateY(0);
-                opacity: 1;
-                visibility: visible;
-            }
-
-            .nav-toggle {
-                display: block;
-            }
-
             .hero h1 {
                 font-size: 2.5rem;
             }
@@ -366,53 +267,38 @@
     </style>
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#" class="nav-logo">Viaje a Japón 2024</a>
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="#home" class="nav-link">Inicio</a></li>
-                <li><a href="#itinerary" class="nav-link">Itinerario</a></li>
-                <li><a href="#map" class="nav-link">Mapa</a></li>
-            </ul>
-            <button class="nav-toggle" id="nav-toggle">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-    </nav>
-
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
-            <h1>Viaje a Japón 2024</h1>
-            <p>14 Noches, 13 Días de Aventura Inolvidable</p>
-            <p>Desde las luces de neón de Tokio hasta los antiguos templos de Kioto</p>
+            <h1>Viaje a Japón 2025</h1>
+            <p>14 noches, 13 días</p>
+            <p>Tokio • Kioto • Osaka</p>
         </div>
     </section>
 
     <!-- Main Content -->
     <main class="main-content">
-        <h2 class="section-title">Explora Tu Viaje</h2>
+        <h2 class="section-title">Planificación del Viaje</h2>
         
         <div class="cards-grid">
             <div class="card">
                 <div class="card-icon">📅</div>
-                <h3>Itinerario Detallado</h3>
-                <p>Descubre tu plan de viaje completo día a día con actividades detalladas, ubicaciones y consejos exclusivos para cada destino.</p>
+                <h3>Itinerario</h3>
+                <p>Plan detallado día a día con actividades, ubicaciones y recomendaciones para cada destino.</p>
                 <a href="japan_itinerary.html" class="card-btn">Ver Itinerario</a>
             </div>
             
             <div class="card">
                 <div class="card-icon">🗺️</div>
-                <h3>Mapa Interactivo</h3>
-                <p>Visualiza todo tu viaje con un mapa interactivo que muestra todos los destinos, rutas y puntos de interés.</p>
-                <a href="japan_itinerary_map.html" class="card-btn">Explorar Mapa</a>
+                <h3>Mapa</h3>
+                <p>Mapa interactivo con todos los destinos, rutas y puntos de interés del viaje.</p>
+                <a href="japan_itinerary_map.html" class="card-btn">Ver Mapa</a>
             </div>
         </div>
 
         <!-- Trip Statistics -->
         <div class="trip-stats">
-            <h3 style="font-family: 'Rajdhani', sans-serif; font-size: 2rem; margin-bottom: 1rem; color: var(--color-text-primary);">Resumen del Viaje</h3>
+            <h3 style="font-family: 'Rajdhani', sans-serif; font-size: 2rem; margin-bottom: 1rem; color: var(--color-text-primary);">Datos del Viaje</h3>
             <div class="stats-grid">
                 <div class="stat-item">
                     <span class="stat-number">14</span>
@@ -436,50 +322,12 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2024 Viaje a Japón. ¡Tu aventura te espera!</p>
+        <p>&copy; 2025 Viaje a Japón</p>
     </footer>
 
     <!-- JavaScript for Navigation -->
+    <script src="navbar.js"></script>
     <script>
-        // Mobile navigation toggle
-        const navToggle = document.getElementById('nav-toggle');
-        const navMenu = document.getElementById('nav-menu');
-
-        navToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
-
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-            });
-        });
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Navbar background on scroll
-        window.addEventListener('scroll', () => {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 100) {
-                navbar.style.background = 'rgba(18, 18, 18, 0.98)';
-            } else {
-                navbar.style.background = 'rgba(18, 18, 18, 0.95)';
-            }
-        });
-
         // Add loading animation to cards
         document.addEventListener('DOMContentLoaded', () => {
             const cards = document.querySelectorAll('.card');
