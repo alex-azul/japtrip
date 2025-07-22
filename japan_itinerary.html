@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japón 2024: Itinerario de Viaje</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500,700&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="navbar.css">
+    <style>
+        /* --- Paleta de Colores (Modo Oscuro) --- */
+        :root {
+            --color-bg: #121212;
+            --color-card-bg: #1e1e1e;
+            --color-header-bg: #2a2a2a;
+            --color-text-primary: #e0e0e0;
+            --color-text-secondary: #a0a0a0;
+            --color-accent-primary: #e63946; /* Rojo vibrante */
+            --color-accent-secondary: #457b9d; /* Azul apagado */
+            --shadow: 0 8px 24px rgba(0,0,0,0.5);
+            --border-radius: 16px;
+        }
+
+        /* --- Estilos Generales --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: var(--color-bg);
+            color: var(--color-text-primary);
+            line-height: 1.6;
+        }
+
+        /* --- Encabezado Espectacular --- */
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1524413840807-0c3cb6fa808d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDEzfHx0b2t5byUyMG5pZ2h0fGVufDB8fHx8MTY4ODU2NzIzNA&ixlib=rb-4.0.3&q=80&w=1080') no-repeat center center;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 5rem 1rem 4rem;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+        }
+
+        header h1 {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 4rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        header p {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: rgba(255,255,255,0.8);
+        }
+
+        /* --- Contenedor Principal --- */
+        main {
+            max-width: 950px;
+            margin: 2.5rem auto;
+            padding: 0 1rem;
+        }
+
+        /* --- Secciones de Ciudad --- */
+        .city-section {
+            margin-bottom: 3.5rem;
+        }
+
+        .city-section h2 {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--color-text-primary);
+            border-bottom: 4px solid var(--color-accent-primary);
+            padding-bottom: 0.8rem;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* --- Tarjetas de Día --- */
+        .day-card {
+            background-color: var(--color-card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 1.5rem 2rem;
+            margin-bottom: 2rem;
+            border-left: 6px solid;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .day-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.7);
+        }
+        
+        /* Colores de borde por ciudad */
+        #tokio .day-card { border-color: #EF476F; }
+        #kioto .day-card { border-color: #FFD166; }
+        #osaka .day-card { border-color: #06D6A0; }
+        #tokio-final .day-card { border-color: #118AB2; }
+
+
+        .day-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #333;
+            padding-bottom: 1rem;
+        }
+
+        .day-header h3 {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--color-text-primary);
+            margin: 0;
+        }
+        
+        .day-header .date {
+             font-weight: 500;
+             color: var(--color-text-secondary);
+             margin-left: 0.5rem;
+        }
+
+        /* --- Lista de Puntos Clave --- */
+        .key-points-list {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        .key-point {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.25rem;
+        }
+
+        .key-point .icon {
+            font-size: 1.8rem;
+            margin-right: 1rem;
+            margin-top: -4px;
+        }
+
+        .key-point .text-content strong {
+            display: block;
+            font-size: 1.1rem;
+            color: var(--color-text-primary);
+            margin-bottom: 0.25rem;
+        }
+        
+        .key-point .text-content span {
+            font-size: 0.95rem;
+            color: var(--color-text-secondary);
+        }
+
+        /* --- Insignias de Estado --- */
+        .status-badge {
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        .status-fijo { background-color: #2a9d8f; }
+        .status-eleccion { background-color: #e9c46a; color: #333; }
+        .status-split { background-color: #f77f00; }
+        .status-libre { background-color: #6c757d; }
+        .status-cerrado { background-color: #d62828; }
+        .status-opcional { background-color: #00b4d8; }
+
+
+        /* --- Responsividad --- */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.5rem; }
+            header p { font-size: 1rem; }
+            .city-section h2 { font-size: 2rem; }
+            .day-card { padding: 1.5rem; }
+            .day-header h3 { font-size: 1.5rem; }
+        }
+
+        /* Adjust for navbar */
+        body {
+            padding-top: 80px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Japón 2024</h1>
+        <p>Itinerario Propuesto · 14 Noches, 13 Días</p>
+    </header>
+
+    <main>
+
+        <!-- ===================== TOKIO · 5 NOCHES ===================== -->
+        <section class="city-section" id="tokio">
+            <h2>Tokio: 5 Noches</h2>
+            
+            <!-- D0 -->
+            <div class="day-card">
+                <div class="day-header">
+                    <h3>Día 0: Primer Contacto <span class="date">(28 Nov)</span></h3>
+                    <div class="status-badge status-fijo">Fijo</div>
+                </div>
+                <ul class="key-points-list">
+                    <li class="key-point"><span class="icon">🏮</span><div class="text-content"><strong>Sensō-ji & Kaminarimon</strong><span>Primer impacto con el Japón tradicional en el templo más antiguo de Tokio.</span></div></li>
+                    <li class="key-point"><span class="icon">🏞️</span><div class="text-content"><strong>Paseo por Río Sumida</strong><span>Un respiro tranquilo para estirar las piernas tras el vuelo, con vistas del skyline.</span></div></li>
+                    <li class="key-point"><span class="icon">🛍️</span><div class="text-content"><strong>Kuramae Craft Shops</strong><span>Exploramos una zona con encanto, llena de pequeñas tiendas de artesanos. Ideal para un inicio sin prisas.</span></div></li>
+                </ul>
+            </div>
+
+            <!-- D1 -->
+            <div class="day-card">
+                <div class="day-header">
+                    <h3>Día 1: Mercados y Vistas 360° <span class="date">(29 Nov)</span></h3>
+                    <div class="status-badge status-fijo">Fijo</div>
+                </div>
+                <ul class="key-points-list">
+                    <li class="key-point"><span class="icon">🍣</span><div class="text-content"><strong>Tsukiji Outer Market</strong><span>Inmersión en la cultura gastronómica con puestos de comida callejera y productos frescos.</span></div></li>
+                    <li class="key-point"><span class="icon">🌳</span><div class="text-content"><strong>Jardines Hama-rikyū</strong><span>Un oasis de paz con rascacielos de fondo. El contraste perfecto al bullicio del mercado.</span></div></li>
+                    <li class="key-point"><span class="icon">🌇</span><div class="text-content"><strong>Cruce de Shibuya & Shibuya Sky</strong><span>Vivimos el cruce más famoso del mundo y subimos al atardecer para una vista panorámica inolvidable.</span></div></li>
+                </ul>
+            </div>
+
+            <!-- D2 -->
+            <div class="day-card">
+                <div class="day-header">
+                    <h3>Día 2: Santuarios y Neones <span class="date">(30 Nov)</span></h3>
+                    <div class="status-badge status-fijo">Fijo</div>
+                </div>
+                <ul class="key-points-list">
+                    <li class="key-point"><span class="icon">⛩️</span><div class="text-content"><strong>Santuario Meiji & Harajuku</strong><span>Pasamos de la solemnidad del santuario más importante de Tokio al epicentro de la moda juvenil.</span></div></li>
+                    <li class="key-point"><span class="icon">🏙️</span><div class="text-content"><strong>Mirador del Tochō (Shinjuku)</strong><span>Subida gratuita a los rascacielos del gobierno metropolitano para vistas espectaculares.</span></div></li>
+                    <li class="key-point"><span class="icon">🍜</span><div class="text-content"><strong>Omoide Yokocho & Golden Gai</strong><span>Terminamos el día cenando en callejones de la posguerra y explorando los diminutos bares de Golden Gai.</span></div></li>
+                </ul>
+            </div>
+            
+            <!-- D3 -->
+            <div class="day-card">
+                <div class="day-header">
+                    <h3>Día 3: Cultura Pop y Mercados <span class="date">(1 Dic)</span></h3>
+                    <div class="status-badge status-fijo">Fijo</div>
+                </div>
+                <ul class="key-points-list">
+                    <li class="key-point"><span class="icon">🏞️</span><div class="text-content"><strong>Parque Ueno & Ameyoko</strong><span>Mañana cultural en el parque (museos opcionales) y compras en el caótico mercado de Ameya Yokocho.</span></div></li>
+                    <li class="key-point"><span class="icon">🎮</span><div class="text-content"><strong>Akihabara "Electric Town"</strong><span>Tarde y noche en el paraíso otaku: compras de electrónica, manga, figuras y vicio en los salones arcade.</span></div></li>
+                </ul>
+            </div>
+            
+            <!-- D4 -->
+            <div class="day-card">
+                <div class="day-header">
+                    <h3>Día 4: Relax y Vanguardia <span class="date">(2 Dic)</span></h3>
+                    <div class="status-badge status-eleccion">Elección en grupo</div>
+                </div>
+                 <ul class="key-points-list">
+                    <li class="key-point"><span class="icon">☕</span><div class="text-content"><strong>Kiyosumi-Shirakawa</strong><span>Mañana tranquila en el "barrio del café" de Tokio, con canales y un ambiente muy local y relajado.</span></div></li>
+                    <li class="key-point"><span class="icon">🎨</span><div class="text-content"><strong>Opción A: Roppongi</strong><span>Para los amantes del arte (Mori Art Museum) y las vistas nocturnas desde la Torre de Tokio.</span></div></li>
+                    <li class="key-point"><span class="icon">🤖</span><div class="text-content"><strong>Opción B: Bahía de Tokio (Odaiba)</strong><span>Para ver el Gundam gigante, cruzar el Rainbow Bridge y disfrutar de las atracciones de la isla artificial.</span></div></li>
+                </ul>
+            </div>
+
+        </section>
+        
+        <!-- ===================== KIOTO · 4 NOCHES ===================== -->
+        <section class="city-section" id="kioto">
+            <h2>Kioto: 4 Noches</h2>
+            
+            <!-- D5 -->
+            <div class="day-card">
+                <div class="day-header">
+                    <h3>Día 5: Llegada a la Tradición <span class="date">(3 Dic)</span></h3>
+                    <div class="status-badge status-fijo">Fijo</div>
+                </div>
+                <ul class="key-points-list">
+                    <li class="key-point"><span class="icon">🚄</span><div class="text-content"><strong>Viaje en Shinkansen</strong><span>Experimentamos la velocidad y puntualidad del tren bala japonés.</span></div></li>
+                    <li class="key-point"><span class="icon">🍢</span><div class="text-content"><strong>Mercado Nishiki</strong><span>Primer contacto con la cocina de Kioto en su "cocina" central, un mercado lleno de delicias.</span></div></li>
+                    <li class="key-point"><span class="icon">🏮</span><div class="text-content"><strong>Ponto-chō y Gion</strong><span>Paseo nocturno por los barrios de geishas más famosos, con sus farolillos rojos y ambiente mágico.</span></div></li>
+                </ul>
+            </div>
+
+            <!-- D6 -->
+            <div class="day-card">
+                <div class="day-header">
+                    <h3>Día 6: La Magia de Arashiyama <span class="date">(4 Dic)</span></h3>
+                    <div class="status-badge status-fijo">Fijo</div>
+                </div>
+                <ul class="key-points-list">
+                    <li class="key-point"><span class="icon">🎍</span><div class="text-content"><strong>Bosque de Bambú de Sagano</strong><span>Madrugamos para caminar por este icónico pasaje antes de que lleguen las multitudes.</span></div></li>
+                    <li class="key-point"><span class="icon">🐒</span><div class="text-content"><strong>Monkey Park Iwatayama</strong><span>Subimos una pequeña colina para obtener vistas increíbles de Kioto y estar rodeados de macacos japoneses.</span></div></li>
+                    <li class="key-point"><span class="icon">🗿</span><div class="text-content"><strong>Templo Otagi Nenbutsu-ji</strong><span>Terminamos en una joya oculta: un templo con 1200 estatuas de piedra, cada una con una expresión única.</span></div></li>
+                </ul>
+            </div>
+            
+            <!-- D7 -->
+            <div class="day-card">
+                 <div class="day-header">
+                    <h3>Día 7: Ruta de los Iconos <span class="date">(5 Dic)</span></h3>
+                    <div class="status-badge status-fijo">Fijo</div>
+                </div>
+                <ul class="key-points-list">
+                    <li class="key-point"><span class="icon">⛩️</span><div class="text-content"><strong>Fushimi Inari-Taisha</strong><span>Recorremos los miles de torii rojos que serpentean por la montaña. Otra visita para la que madrugar es clave.</span></div></li>
+                    <li class="key-point"><span class="icon">⛰️</span><div class="text-content"><strong>Templo Kiyomizu-dera</strong><span>Visitamos el famoso templo con su balcón de madera y vistas de la ciudad.</span></div></li>
+                    <li class="key-point"><span class="icon">🚶</span><div class="text-content"><strong>Sannenzaka & Ninenzaka</strong><span>Paseamos por las calles históricas mejor conservadas de Kioto, llenas de tiendas y casas de té.</span></div></li>
+                </ul>
+            </div>
+
+            <!-- D8 -->
+            <div class="day-card">
+                 <div class="day-header">
+                    <h3>Día 8: Oro, Zen y Videojuegos <span class="date">(6 Dic)</span></h3>
+                    <div class="status-badge status-eleccion">Elección en grupo</div>
+                </div>
+                <ul class="key-points-list">
+                    <li class="key-point"><span class="icon">🌟</span><div class="text-content"><strong>Kinkaku-ji (Pabellón Dorado)</strong><span>Admiramos la belleza de este templo recubierto de pan de oro reflejado en su estanque.</span></div></li>
+                    <li class="key-point"><span class="icon">🧘</span><div class="text-content"><strong>Ryōan-ji (Jardín Zen)</strong><span>Contemplamos el jardín de rocas más famoso del mundo, un ejercicio de meditación y misterio.</span></div></li>
+                    <li class="key-point"><span class="icon">🍄</span><div class="text-content"><strong>Tarde: Nintendo Museum o Alternativas</strong><span>El grupo se divide para visitar el esperado museo de Nintendo o explorar otras zonas como el Paseo del Filósofo.</span></div></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ===================== OSAKA · 3 NOCHES ===================== -->
+        <section class="city-section" id="osaka">
+            <h2>Osaka: 3 Noches</h2>
+            
+            <!-- D9 -->
+            <div class="day-card">
+                 <div class="day-header">
+                    <h3>Día 9: Neón y Street Food <span class="date">(7 Dic)</span></h3>
+                    <div class="status-badge status-fijo">Fijo</div>
+                </div>
+                <ul class="key-points-list">
+                    <li class="key-point"><span class="icon">🐙</span><div class="text-content"><strong>Mercado Kuromon & Dōtonbori</strong><span>Nos sumergimos en la cultura del "Kuidaore" (comer hasta reventar) probando takoyaki, okonomiyaki y más.</span></div></li>
+                    <li class="key-point"><span class="icon">🛍️</span><div class="text-content"><strong>Shinsaibashi & Amerikamura</strong><span>Recorremos la principal arteria comercial y el barrio de la moda alternativa de Osaka.</span></div></li>
+                    <li class="key-point"><span class="icon">🏃</span><div class="text-content"><strong>Glico Running Man</strong><span>Nos hacemos la foto obligatoria con el icónico cartel de neón de Dōtonbori.</span></div></li>
+                </ul>
+            </div>
+
+            <!-- D10 -->
+            <div class="day-card">
+                 <div class="day-header">
+                    <h3>Día 10: Parques y Castillos <span class="date">(8 Dic)</span></h3>
+                    <div class="status-badge status-split">Split Asegurado</div>
+                </div>
+                <ul class="key-points-list">
+                    <li class="key-point"><span class="icon">🎢</span><div class="text-content"><strong>Grupo A: Universal Studios Japan</strong><span>Día completo de adrenalina y diversión en uno de los mejores parques temáticos del mundo.</span></div></li>
+                    <li class="key-point"><span class="icon">🏯</span><div class="text-content"><strong>Grupo B: Castillo de Osaka y Shinsekai</strong><span>Exploramos el imponente castillo y su historia, y luego viajamos al pasado en el nostálgico barrio de Shinsekai.</span></div></li>
+                </ul>
+            </div>
+
+            <!-- D11 -->
+            <div class="day-card">
+                <div class="day-header">
+                    <h3>Día 11: Ciervos Sagrados <span class="date">(9 Dic)</span></h3>
+                    <div><span class="status-badge status-fijo">Fijo</span> <span class="status-badge status-opcional">Kobe Opcional</span></div>
+                </div>
+                <ul class="key-points-list">
+                    <li class="key-point"><span class="icon">🦌</span><div class="text-content"><strong>Parque de Nara</strong><span>Hacemos una excursión para saludar e interactuar con los cientos de ciervos que campan a sus anchas.</span></div></li>
+                    <li class="key-point"><span class="icon">🙏</span><div class="text-content"><strong>Tōdai-ji (Gran Buda)</strong><span>Visitamos el impresionante templo que alberga una estatua de bronce de Buda de 15 metros de altura.</span></div></li>
+                    <li class="key-point"><span class="icon">🥩</span><div class="text-content"><strong>Noche Opcional en Kobe</strong><span>Los más foodies pueden hacer un viaje rápido para cenar la auténtica y mundialmente famosa ternera de Kobe.</span></div></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ===================== TOKIO FINAL · 1 NOCHE ===================== -->
+        <section class="city-section" id="tokio-final">
+            <h2>Tokio Final: 1 Noche</h2>
+            
+            <!-- D12 -->
+            <div class="day-card">
+                <div class="day-header">
+                    <h3>Día 12: Misión Final <span class="date">(10 Dic)</span></h3>
+                    <div class="status-badge status-libre">Libre</div>
+                </div>
+                <ul class="key-points-list">
+                    <li class="key-point"><span class="icon">🎁</span><div class="text-content"><strong>Ikebukuro y Compras Finales</strong><span>Dedicamos la tarde a explorar este gran centro de entretenimiento, perfecto para compras otaku de última hora (Pokémon Center, etc.).</span></div></li>
+                    <li class="key-point"><span class="icon">🔄</span><div class="text-content"><strong>Día Comodín</strong><span>Este día sirve para visitar cualquier lugar que haya quedado pendiente o repetir alguno que haya gustado especialmente.</span></div></li>
+                </ul>
+            </div>
+            
+            <!-- D13 -->
+            <div class="day-card">
+                 <div class="day-header">
+                    <h3>Día 13: Vuelta a Casa <span class="date">(11 Dic)</span></h3>
+                    <div class="status-badge status-cerrado">Cerrado</div>
+                </div>
+                <ul class="key-points-list">
+                    <li class="key-point"><span class="icon">✈️</span><div class="text-content"><strong>Vuelo 12:35h (Haneda)</strong><span>Mañana tranquila para preparar equipaje y dirigirnos al aeropuerto. Fin de una aventura inolvidable.</span></div></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <script src="navbar.js"></script>
+</body>
+</html>
