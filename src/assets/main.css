@@ -1,0 +1,58 @@
+@import './base.css';
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500,700&family=Noto+Sans+JP:wght@400;500&display=swap');
+
+/* --- Paleta de Colores (Modo Oscuro) --- */
+:root {
+  --color-bg: #121212;
+  --color-card-bg: #1e1e1e;
+  --color-header-bg: #2a2a2a;
+  --color-text-primary: #e0e0e0;
+  --color-text-secondary: #a0a0a0;
+  --color-accent-primary: #e63946; /* Rojo vibrante */
+  --color-accent-secondary: #457b9d; /* Azul apagado */
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  --border-radius: 16px;
+}
+
+/* --- Estilos Generales --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+/* --- Insignias de Estado --- */
+.status-fijo {
+  background-color: #2a9d8f;
+}
+.status-eleccion {
+  background-color: #e9c46a;
+  color: #333;
+}
+.status-split {
+  background-color: #f77f00;
+}
+.status-libre {
+  background-color: #6c757d;
+}
+.status-cerrado {
+  background-color: #d62828;
+}
+.status-opcional {
+  background-color: #00b4d8;
+}
