@@ -1,11 +1,55 @@
 <!-- src/components/DayCard.vue -->
 <script setup lang="ts">
-import type { Day } from '@/types/itinerary'
+import { ref, computed } from 'vue'
+import type { Day, DayOption } from '@/types/itinerary'
 
-defineProps<{
+const props = defineProps<{
   day: Day
   borderColor: string
 }>()
+
+const selectedOptionId = ref<string>('')
+
+const hasOptions = computed(() => props.day.opciones && props.day.opciones.length > 0)
+
+const currentOption = computed(() => {
+  if (!hasOptions.value) return null
+  
+  if (!selectedOptionId.value) {
+    const defaultOption = props.day.opciones?.find(opt => opt.isDefault)
+    const firstOption = props.day.opciones?.[0]
+    return defaultOption || firstOption || null
+  }
+  
+  return props.day.opciones?.find(opt => opt.id === selectedOptionId.value) || null
+})
+
+const displayData = computed(() => {
+  if (hasOptions.value && currentOption.value) {
+    return {
+      status: currentOption.value.status,
+      puntosClave: currentOption.value.puntosClave
+    }
+  }
+  return {
+    status: props.day.status || [],
+    puntosClave: props.day.puntosClave || []
+  }
+})
+
+const selectOption = (optionId: string) => {
+  selectedOptionId.value = optionId
+}
+
+// Initialize with default option
+if (hasOptions.value && !selectedOptionId.value) {
+  const defaultOption = props.day.opciones?.find(opt => opt.isDefault)
+  if (defaultOption) {
+    selectedOptionId.value = defaultOption.id
+  } else if (props.day.opciones?.[0]) {
+    selectedOptionId.value = props.day.opciones[0].id
+  }
+}
 </script>
 
 <template>
@@ -16,7 +60,7 @@ defineProps<{
       </h3>
       <div class="status-container">
         <div
-          v-for="status in day.status"
+          v-for="status in displayData.status"
           :key="status.texto"
           :class="`status-badge ${status.clase}`"
         >
@@ -24,12 +68,40 @@ defineProps<{
         </div>
       </div>
     </div>
+
+    <!-- Day Options Tabs -->
+    <div v-if="hasOptions" class="day-options">
+      <button
+        v-for="option in day.opciones"
+        :key="option.id"
+        @click="selectOption(option.id)"
+        :class="['option-tab', { active: selectedOptionId === option.id }]"
+      >
+        {{ option.label }}
+      </button>
+    </div>
+
     <ul class="key-points-list">
-      <li v-for="punto in day.puntosClave" :key="punto.titulo" class="key-point">
+      <li v-for="punto in displayData.puntosClave" :key="punto.titulo" class="key-point">
         <span class="icon">{{ punto.icono }}</span>
         <div class="text-content">
           <strong>{{ punto.titulo }}</strong>
           <span>{{ punto.descripcion }}</span>
+          
+          <!-- Activity Alternatives -->
+          <div v-if="punto.alternativas && punto.alternativas.length > 0" class="alternatives">
+            <div class="alternatives-header">Alternativas:</div>
+            <div class="alternatives-list">
+              <div 
+                v-for="alt in punto.alternativas" 
+                :key="alt.titulo"
+                class="alternative-item"
+              >
+                <strong>{{ alt.titulo }}</strong>
+                <span>{{ alt.descripcion }}</span>
+              </div>
+            </div>
+          </div>
         </div>
       </li>
     </ul>
@@ -123,12 +195,99 @@ defineProps<{
   text-transform: uppercase;
 }
 
+/* Day Options Styling */
+.day-options {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+}
+
+.option-tab {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: var(--color-text-secondary);
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.option-tab:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.option-tab.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-color: #667eea;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Activity Alternatives Styling */
+.alternatives {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border-left: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+.alternatives-header {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.alternatives-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.alternative-item {
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  transition: background 0.2s ease;
+}
+
+.alternative-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.alternative-item strong {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--color-text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.alternative-item span {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  line-height: 1.4;
+}
+
 @media (max-width: 768px) {
   .day-card {
     padding: 1.5rem;
   }
   .day-header h3 {
     font-size: 1.5rem;
+  }
+  .option-tab {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+  .alternatives {
+    padding: 0.75rem;
   }
 }
 </style>

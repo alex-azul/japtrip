@@ -1,9 +1,15 @@
 // src/types/itinerary.ts
 
+export interface ActivityAlternative {
+  titulo: string
+  descripcion: string
+}
+
 export interface KeyPoint {
   icono: string
   titulo: string
   descripcion: string
+  alternativas?: ActivityAlternative[]
 }
 
 export interface DayStatus {
@@ -11,11 +17,20 @@ export interface DayStatus {
   texto: string
 }
 
+export interface DayOption {
+  id: string
+  label: string
+  isDefault?: boolean
+  status: DayStatus[]
+  puntosClave: KeyPoint[]
+}
+
 export interface Day {
   titulo: string
   fecha: string
-  status: DayStatus[]
-  puntosClave: KeyPoint[]
+  status?: DayStatus[]
+  puntosClave?: KeyPoint[]
+  opciones?: DayOption[]
 }
 
 export interface City {
