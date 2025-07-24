@@ -19,13 +19,13 @@ const hasOptions = computed(() => props.day.opciones && props.day.opciones.lengt
 
 const currentOption = computed(() => {
   if (!hasOptions.value) return null
-  
+
   if (!selectedOptionId.value) {
     const defaultOption = props.day.opciones?.find(opt => opt.isDefault)
     const firstOption = props.day.opciones?.[0]
     return defaultOption || firstOption || null
   }
-  
+
   return props.day.opciones?.find(opt => opt.id === selectedOptionId.value) || null
 })
 
@@ -51,12 +51,12 @@ const navigateToDetail = () => {
     cityId: props.cityId,
     dayIndex: props.dayIndex.toString()
   }
-  
+
   // If there's a selected option or a current option, include it in the route
   if (hasOptions.value && currentOption.value) {
     routeParams.optionId = currentOption.value.id
   }
-  
+
   router.push({
     name: 'day-detail',
     params: routeParams
@@ -81,28 +81,20 @@ if (hasOptions.value && !selectedOptionId.value) {
         {{ day.titulo }} <span class="date">({{ day.fecha }})</span>
       </h3>
       <div class="status-container">
-        <div
-          v-for="status in displayData.status"
-          :key="status.texto"
-          :class="`status-badge ${status.clase}`"
-        >
+        <div v-for="status in displayData.status" :key="status.texto" :class="`status-badge ${status.clase}`">
           {{ status.texto }}
         </div>
-        <div class="detail-indicator">
+        <!-- <div class="detail-indicator">
           <span class="detail-text">Ver detalles</span>
           <span class="detail-arrow">→</span>
-        </div>
+        </div> -->
       </div>
     </div>
 
     <!-- Day Options Tabs -->
     <div v-if="hasOptions" class="day-options">
-      <button
-        v-for="option in day.opciones"
-        :key="option.id"
-        @click.stop="selectOption(option.id)"
-        :class="['option-tab', { active: selectedOptionId === option.id }]"
-      >
+      <button v-for="option in day.opciones" :key="option.id" @click.stop="selectOption(option.id)"
+        :class="['option-tab', { active: selectedOptionId === option.id }]">
         {{ option.label }}
       </button>
     </div>
@@ -113,16 +105,12 @@ if (hasOptions.value && !selectedOptionId.value) {
         <div class="text-content">
           <strong>{{ punto.titulo }}</strong>
           <span>{{ punto.descripcion }}</span>
-          
+
           <!-- Activity Alternatives -->
           <div v-if="punto.alternativas && punto.alternativas.length > 0" class="alternatives">
             <div class="alternatives-header">Alternativas:</div>
             <div class="alternatives-list">
-              <div 
-                v-for="alt in punto.alternativas" 
-                :key="alt.titulo"
-                class="alternative-item"
-              >
+              <div v-for="alt in punto.alternativas" :key="alt.titulo" class="alternative-item">
                 <strong>{{ alt.titulo }}</strong>
                 <span>{{ alt.descripcion }}</span>
               </div>
@@ -311,13 +299,16 @@ if (hasOptions.value && !selectedOptionId.value) {
   .day-card {
     padding: 1.5rem;
   }
+
   .day-header h3 {
     font-size: 1.5rem;
   }
+
   .option-tab {
     font-size: 0.8rem;
     padding: 0.4rem 0.8rem;
   }
+
   .alternatives {
     padding: 0.75rem;
   }

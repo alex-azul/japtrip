@@ -20,27 +20,27 @@
             "keyPlaces": [
               {
                 "name": "Templo Sensō-ji y Puerta Kaminarimon",
-                "description": "El templo budista más antiguo y significativo de Tokio, dedicado a Kannon, la diosa de la misericordia. La visita comienza cruzando la imponente 'Puerta del Trueno' (Kaminarimon), famosa por su farolillo gigante de 700 kg, para luego recorrer la animada calle Nakamise-dori hasta el salón principal. [12, 14]",
+                "description": "El templo budista más antiguo y significativo de Tokio, dedicado a Kannon, la diosa de la misericordia. La visita comienza cruzando la imponente 'Puerta del Trueno' (Kaminarimon), famosa por su farolillo gigante de 700 kg, para luego recorrer la animada calle Nakamise-dori hasta el salón principal.",
                 "timeSlot": "16:00 - 18:00",
                 "importance": "must-see",
                 "options": ["Visitar de día para el bullicio y las tiendas", "Visitar de noche para ver la iluminación con menos gente"],
-                "trivia": ["La leyenda cuenta que fue fundado en el 628 por dos hermanos que pescaron una estatua de Kannon en el río Sumida. [12]", "El salón principal fue destruido en la Segunda Guerra Mundial y reconstruido como símbolo de paz. [18]"]
+                "trivia": ["La leyenda cuenta que fue fundado en el 628 por dos hermanos que pescaron una estatua de Kannon en el río Sumida.", "El salón principal fue destruido en la Segunda Guerra Mundial y reconstruido como símbolo de paz."]
               },
               {
                 "name": "Paseo por el Parque y Río Sumida",
-                "description": "Un agradable paseo por la orilla del río Sumida, que ofrece un respiro del ajetreo de la ciudad. Es el lugar perfecto para obtener vistas panorámicas de la torre Tokyo Skytree y el peculiar edificio de la cervecería Asahi. [6]",
+                "description": "Un agradable paseo por la orilla del río Sumida, que ofrece un respiro del ajetreo de la ciudad. Es el lugar perfecto para obtener vistas panorámicas de la torre Tokyo Skytree y el peculiar edificio de la cervecería Asahi.",
                 "timeSlot": "18:00 - 18:45",
                 "importance": "recommended",
                 "options": ["Cruzar el puente Azumabashi para fotos", "Tomar un barco-bus para una perspectiva diferente"],
-                "trivia": ["El parque que bordea el río tiene casi 600 cerezos, lo que lo convierte en un lugar espectacular en primavera. [19]", "Desde 2020, se puede caminar por debajo del puente del tren a través del 'Sumida River Walk'. [22]"]
+                "trivia": ["El parque que bordea el río tiene casi 600 cerezos, lo que lo convierte en un lugar espectacular en primavera.", "Desde 2020, se puede caminar por debajo del puente del tren a través del 'Sumida River Walk'."]
               },
               {
                 "name": "Exploración de Kuramae",
-                "description": "Conocido como el 'Brooklyn de Tokio', Kuramae es un barrio de artesanos que ha resurgido con una mezcla de talleres tradicionales y modernas tiendas de diseño, cafeterías y chocolaterías. [25] Ideal para encontrar souvenirs únicos y de calidad.",
+                "description": "Conocido como el 'Brooklyn de Tokio', Kuramae es un barrio de artesanos que ha resurgido con una mezcla de talleres tradicionales y modernas tiendas de diseño, cafeterías y chocolaterías. Ideal para encontrar souvenirs únicos y de calidad.",
                 "timeSlot": "18:45 - 20:00",
                 "importance": "optional",
                 "options": ["Visitar 'Kakimori' para papelería personalizada", "Probar el chocolate 'bean-to-bar' en 'Dandelion Chocolate'"],
-                "trivia": ["Históricamente, la zona albergaba almacenes de arroz para el gobierno durante el período Edo.", "Muchas tiendas son regentadas por jóvenes artesanos que han revitalizado talleres antiguos. [26]"]
+                "trivia": ["Históricamente, la zona albergaba almacenes de arroz para el gobierno durante el período Edo.", "Muchas tiendas son regentadas por jóvenes artesanos que han revitalizado talleres antiguos."]
               }
             ],
             "transport": {
@@ -52,7 +52,7 @@
                   "line": "Keikyu Airport Line (servicio directo a la Toei Asakusa Line)",
                   "duration": "~45 min",
                   "cost": "aprox. 650¥",
-                  "notes": "Es la ruta más eficiente, ya que no requiere transbordos. El tren Keikyu se convierte directamente en la línea de metro Asakusa. [3, 11]"
+                  "notes": "Es la ruta más eficiente, ya que no requiere transbordos. El tren Keikyu se convierte directamente en la línea de metro Asakusa."
                 },
                 {
                   "from": "Sensō-ji",
@@ -66,20 +66,20 @@
             },
             "trivia": [
               "Asakusa era el principal distrito de entretenimiento de Tokio durante el Período Edo.",
-              "A pesar de su aspecto antiguo, gran parte del área fue reconstruida después de los bombardeos de la Segunda Guerra Mundial. [18]",
+              "A pesar de su aspecto antiguo, gran parte del área fue reconstruida después de los bombardeos de la Segunda Guerra Mundial.",
               "El Sanja Matsuri, uno de los festivales sintoístas más grandes y salvajes de Tokio, se celebra en el Santuario de Asakusa, dentro del recinto de Sensō-ji."
             ],
             "nearbyActivities": [
               {
                 "name": "Calle Comercial Nakamise-dori",
-                "description": "La calle de 250 metros que conduce al templo, llena de puestos que venden desde abanicos y katanas de recuerdo hasta galletas de arroz (senbei) y otros dulces tradicionales. [12]",
+                "description": "La calle de 250 metros que conduce al templo, llena de puestos que venden desde abanicos y katanas de recuerdo hasta galletas de arroz (senbei) y otros dulces tradicionales.",
                 "timeNeeded": "30-60 min",
                 "category": "shopping",
                 "walkTime": "Estás en ella al entrar a Sensō-ji"
               },
               {
                 "name": "Centro de Información Turística y Cultural de Asakusa",
-                "description": "Edificio de arquitectura moderna diseñado por Kengo Kuma. Sube gratis al mirador del 8º piso para una vista fantástica del templo Sensō-ji con la calle Nakamise y el skyline de fondo. [9]",
+                "description": "Edificio de arquitectura moderna diseñado por Kengo Kuma. Sube gratis al mirador del 8º piso para una vista fantástica del templo Sensō-ji con la calle Nakamise y el skyline de fondo.",
                 "timeNeeded": "20 min",
                 "category": "sightseeing",
                 "walkTime": "2 min (justo enfrente de la puerta Kaminarimon)"
@@ -106,7 +106,7 @@
                 "name": "Asakusa Unatetsu",
                 "type": "Unagi (Anguila)",
                 "priceRange": "$$$",
-                "specialty": "Hitsumabushi, un plato de anguila a la parrilla servido sobre arroz que se disfruta de tres maneras diferentes. [8, 15]",
+                "specialty": "Hitsumabushi, un plato de anguila a la parrilla servido sobre arroz que se disfruta de tres maneras diferentes.",
                 "walkTime": "4 min desde Sensō-ji",
                 "notes": "Una experiencia gastronómica de alta calidad para una primera noche especial."
               }
@@ -136,14 +136,14 @@
           "status": [{ "texto": "Fijo", "clase": "status-fijo" }],
           "puntosClave": [
             {
-              "icono": "🎮",
-              "titulo": "Ikebukuro (Sunshine 60 & Pokémon Center)",
-              "descripcion": "Tarde friki con vistas desde Sunshine 60. **Saltable** si vamos con prisas: se deja para el día libre final."
-            },
-            {
               "icono": "⛩️",
               "titulo": "Meiji Jingū & Harajuku",
               "descripcion": "De la solemnidad del santuario más importante de Tokio al epicentro de la moda juvenil."
+            },
+            {
+              "icono": "🎮",
+              "titulo": "Ikebukuro (Sunshine 60 & Pokémon Center)",
+              "descripcion": "Tarde friki con vistas desde Sunshine 60. **Saltable** si vamos con prisas: se deja para el día libre final."
             },
             {
               "icono": "🍜",
@@ -189,29 +189,13 @@
           ]
         },
         {
-            "titulo": "Día 6: Opción Kioto o Excursión Ghibli Park",
+            "titulo": "Día 6: Excursión a Nara",
             "fecha": "4 Dic",
-            "opciones": [
-              {
-                "id": "6a",
-                "label": "Opción A: Excursión a Nara",
-                "isDefault": true,
-                "status": [{ "texto": "Elección en grupo", "clase": "status-eleccion" }],
-                "puntosClave": [
-                  { "icono": "🦌", "titulo": "Parque de Nara", "descripcion": "Saludamos a los ciervos sagrados." },
-                  { "icono": "🙏", "titulo": "Tōdai-ji (Gran Buda)", "descripcion": "Templo gigante con Buda de 15 m." },
-                  { "icono": "🌙", "titulo": "Tarde Flexible en Kioto", "descripcion": "Regreso con varias opciones para la tarde-noche."}
-                ]
-              },
-              {
-                "id": "6b",
-                "label": "Opción B: Ghibli Park",
-                "status": [{ "texto": "Alternativa", "clase": "status-alternativa" }],
-                "puntosClave": [
-                  { "icono": "🎢", "titulo": "Excursión a Ghibli Park", "descripcion": "Día completo para visitar el parque temático de Studio Ghibli cerca de Nagoya. Requiere sacrificar el día de Kioto/Nara." },
-                  { "icono": "🚌", "titulo": "Viaje Kioto - Ghibli Park", "descripcion": "El trayecto en tren dura aproximadamente 2 horas y 15 minutos por cada sentido. [11, 30]"}
-                ]
-              }
+            "status": [{ "texto": "Fijo", "clase": "status-fijo" }],
+            "puntosClave": [
+              { "icono": "🦌", "titulo": "Parque de Nara", "descripcion": "Saludamos a los ciervos sagrados." },
+              { "icono": "🙏", "titulo": "Tōdai-ji (Gran Buda)", "descripcion": "Templo gigante con Buda de 15 m." },
+              { "icono": "🌙", "titulo": "Tarde Flexible en Kioto", "descripcion": "Regreso con varias opciones para la tarde-noche."}
             ]
           },
         {
@@ -295,8 +279,8 @@
                 "label": "10B: Opciones Temáticas",
                 "status": [{"texto": "Alternativa", "clase": "status-alternativa"}],
                 "puntosClave": [
-                  {"icono": "🎨", "titulo": "Ghibli Museum (Mitaka)", "descripcion": "Visita al mágico museo de Studio Ghibli. Requiere reserva con muchísima antelación. Se encuentra en Mitaka, a las afueras de Tokio. [4, 7]"},
-                  {"icono": "💪", "titulo": "Entrenamiento de Sumo", "descripcion": "Madrugar para ver un entrenamiento (keiko) en una heya (establo) de sumo, principalmente en el área de Ryogoku. Suele ser de 7:30 a 9:30. [9, 10]"}
+                  {"icono": "🎨", "titulo": "Ghibli Museum (Mitaka)", "descripcion": "Visita al mágico museo de Studio Ghibli. Requiere reserva con muchísima antelación. Se encuentra en Mitaka, a las afueras de Tokio."},
+                  {"icono": "💪", "titulo": "Entrenamiento de Sumo", "descripcion": "Madrugar para ver un entrenamiento (keiko) en una heya (establo) de sumo, principalmente en el área de Ryogoku. Suele ser de 7:30 a 9:30."}
                 ]
               }
             ]
