@@ -12,39 +12,39 @@
           "fecha": "28 Nov",
           "status": [{ "texto": "Fijo", "clase": "status-fijo" }],
           "puntosClave": [
-            { "icono": "🏮", "titulo": "Sensō-ji & Kaminarimon", "descripcion": "Primer impacto con el Japón tradicional en el templo más antiguo de Tokio." },
-            { "icono": "🏞️", "titulo": "Paseo por Río Sumida", "descripcion": "Un respiro tranquilo para estirar las piernas tras el vuelo, con vistas del skyline." },
-            { "icono": "🛍️", "titulo": "Kuramae Craft Shops", "descripcion": "Exploramos pequeñas tiendas de artesanos. Ideal para un inicio sin prisas." }
+            { "icono": "🏙️", "titulo": "Llegada, Check-in y Comida", "descripcion": "Aterrizaje, traslado al hotel y primera toma de contacto con la gastronomía local." },
+            { "icono": "🛍️", "titulo": "Tarde de Artesanía en Kuramae", "descripcion": "Exploramos el 'Brooklyn de Tokio' antes de que cierren sus tiendas de diseño." },
+            { "icono": "🏮", "titulo": "Sensō-ji Iluminado y Paseo Nocturno", "descripcion": "Disfrutamos del templo más icónico de Tokio de noche, con menos multitudes y una atmósfera mágica." }
           ],
           "dayDetails": {
             "keyPlaces": [
               {
-                "name": "Templo Sensō-ji y Puerta Kaminarimon",
-                "description": "El templo budista más antiguo y significativo de Tokio, dedicado a Kannon, la diosa de la misericordia. La visita comienza cruzando la imponente 'Puerta del Trueno' (Kaminarimon), famosa por su farolillo gigante de 700 kg, para luego recorrer la animada calle Nakamise-dori hasta el salón principal.",
-                "timeSlot": "16:00 - 18:00",
-                "importance": "must-see",
-                "options": ["Visitar de día para el bullicio y las tiendas", "Visitar de noche para ver la iluminación con menos gente"],
-                "trivia": ["La leyenda cuenta que fue fundado en el 628 por dos hermanos que pescaron una estatua de Kannon en el río Sumida.", "El salón principal fue destruido en la Segunda Guerra Mundial y reconstruido como símbolo de paz."]
-              },
-              {
-                "name": "Paseo por el Parque y Río Sumida",
-                "description": "Un agradable paseo por la orilla del río Sumida, que ofrece un respiro del ajetreo de la ciudad. Es el lugar perfecto para obtener vistas panorámicas de la torre Tokyo Skytree y el peculiar edificio de la cervecería Asahi.",
-                "timeSlot": "18:00 - 18:45",
+                "name": "Paseo por el Río Sumida",
+                "description": "Un agradable paseo por la orilla del río Sumida para estirar las piernas y combatir el jet lag. Ofrece vistas espectaculares de la torre Tokyo Skytree y el peculiar edificio dorado de la cervecería Asahi, especialmente durante la 'hora azul' al atardecer.",
+                "timeSlot": "16:30 - 17:30",
                 "importance": "recommended",
-                "options": ["Cruzar el puente Azumabashi para fotos", "Tomar un barco-bus para una perspectiva diferente"],
-                "trivia": ["El parque que bordea el río tiene casi 600 cerezos, lo que lo convierte en un lugar espectacular en primavera.", "Desde 2020, se puede caminar por debajo del puente del tren a través del 'Sumida River Walk'."]
+                "options": ["Cruzar el puente Azumabashi para fotos clásicas", "Caminar por el 'Sumida River Walk' por debajo de las vías del tren."],
+                "trivia": ["El parque que bordea el río tiene casi 600 cerezos, lo que lo convierte en un lugar espectacular en primavera.", "El edificio dorado junto al río, diseñado por Philippe Starck, se llama 'Super Dry Hall' y su forma representa una llama."]
               },
               {
                 "name": "Exploración de Kuramae",
-                "description": "Conocido como el 'Brooklyn de Tokio', Kuramae es un barrio de artesanos que ha resurgido con una mezcla de talleres tradicionales y modernas tiendas de diseño, cafeterías y chocolaterías. Ideal para encontrar souvenirs únicos y de calidad.",
-                "timeSlot": "18:45 - 20:00",
-                "importance": "optional",
-                "options": ["Visitar 'Kakimori' para papelería personalizada", "Probar el chocolate 'bean-to-bar' en 'Dandelion Chocolate'"],
-                "trivia": ["Históricamente, la zona albergaba almacenes de arroz para el gobierno durante el período Edo.", "Muchas tiendas son regentadas por jóvenes artesanos que han revitalizado talleres antiguos."]
+                "description": "Conocido como el 'Brooklyn de Tokio', Kuramae es un barrio de artesanos con una mezcla de talleres tradicionales y modernas tiendas de diseño, papelerías y cafeterías. Es perfecto para visitar por la tarde antes de que las tiendas empiecen a cerrar sobre las 19:00.",
+                "timeSlot": "17:30 - 19:00",
+                "importance": "recommended",
+                "options": ["Visitar 'Kakimori' para crear un cuaderno personalizado", "Probar el chocolate 'bean-to-bar' en 'Dandelion Chocolate'."],
+                "trivia": ["Históricamente, la zona albergaba los almacenes de arroz del gobierno durante el período Edo.", "Muchas tiendas son regentadas por jóvenes artesanos que han revitalizado talleres antiguos, dándole un aire fresco y creativo."]
+              },
+              {
+                "name": "Templo Sensō-ji y Puerta Kaminarimon (Noche)",
+                "description": "Visitamos el templo budista más antiguo de Tokio cuando la multitud se ha disipado. Aunque el salón principal cierra a las 17:00, los terrenos permanecen abiertos y están bellamente iluminados hasta las 23:00, creando una atmósfera completamente diferente, serena y mágica.",
+                "timeSlot": "19:00 en adelante",
+                "importance": "must-see",
+                "options": ["Fotografiar la pagoda de cinco pisos iluminada", "Pasear por la calle Nakamise-dori vacía."],
+                "trivia": ["La leyenda cuenta que fue fundado en el 628 por dos hermanos que pescaron una estatua de Kannon en el río.", "El salón principal fue destruido en la Segunda Guerra Mundial y reconstruido gracias a donaciones de todo Japón como un símbolo de paz."]
               }
             ],
             "transport": {
-              "overview": "El día se centra en el área de Asakusa, por lo que la mayoría de los desplazamientos entre puntos clave se realizan a pie. El trayecto principal será desde el aeropuerto hasta el hotel/zona de Asakusa.",
+              "overview": "El día se centra en el área de Asakusa, por lo que la mayoría de los desplazamientos entre puntos clave se realizan a pie. El trayecto principal será desde el aeropuerto hasta la zona de Asakusa.",
               "routes": [
                 {
                   "from": "Aeropuerto de Haneda (HND)",
@@ -52,72 +52,139 @@
                   "line": "Keikyu Airport Line (servicio directo a la Toei Asakusa Line)",
                   "duration": "~45 min",
                   "cost": "aprox. 650¥",
-                  "notes": "Es la ruta más eficiente, ya que no requiere transbordos. El tren Keikyu se convierte directamente en la línea de metro Asakusa."
+                  "notes": "La ruta más directa sin transbordos. El tren Keikyu se convierte automáticamente en la línea de metro Asakusa."
                 },
                 {
-                  "from": "Sensō-ji",
+                  "from": "Estación de Asakusa",
                   "to": "Kuramae",
                   "line": "A pie",
                   "duration": "10-15 min",
                   "cost": "0¥",
-                  "notes": "Un agradable paseo hacia el sur, siguiendo el río o explorando las calles secundarias."
+                  "notes": "Un paseo agradable hacia el sur, ideal para empezar a explorar la zona."
                 }
               ]
             },
             "trivia": [
-              "Asakusa era el principal distrito de entretenimiento de Tokio durante el Período Edo.",
-              "A pesar de su aspecto antiguo, gran parte del área fue reconstruida después de los bombardeos de la Segunda Guerra Mundial.",
-              "El Sanja Matsuri, uno de los festivales sintoístas más grandes y salvajes de Tokio, se celebra en el Santuario de Asakusa, dentro del recinto de Sensō-ji."
-            ],
-            "nearbyActivities": [
               {
-                "name": "Calle Comercial Nakamise-dori",
-                "description": "La calle de 250 metros que conduce al templo, llena de puestos que venden desde abanicos y katanas de recuerdo hasta galletas de arroz (senbei) y otros dulces tradicionales.",
-                "timeNeeded": "30-60 min",
-                "category": "shopping",
-                "walkTime": "Estás en ella al entrar a Sensō-ji"
+                "question": "¿Qué criatura mitológica está tallada en la base del gran farolillo de la puerta Kaminarimon?",
+                "answer": "¡Un dragón (ryū)! En la cultura japonesa, los dragones son deidades del agua asociadas con la lluvia y el mar. Este dragón actúa como guardián del templo y se dice que protege a Asakusa de las inundaciones.",
+                "password": "dragon"
               },
               {
-                "name": "Centro de Información Turística y Cultural de Asakusa",
-                "description": "Edificio de arquitectura moderna diseñado por Kengo Kuma. Sube gratis al mirador del 8º piso para una vista fantástica del templo Sensō-ji con la calle Nakamise y el skyline de fondo.",
-                "timeNeeded": "20 min",
-                "category": "sightseeing",
-                "walkTime": "2 min (justo enfrente de la puerta Kaminarimon)"
+                "question": "Por la noche, cuando las tiendas de Nakamise-dori cierran, ¿qué se puede ver pintado en sus persianas metálicas (shutters)?",
+                "answer": "Las persianas están decoradas con hermosas pinturas que forman un largo mural ('emaki') que representa eventos estacionales, festivales y la historia de Asakusa. ¡La calle tiene una segunda vida artística por la noche!",
+                "password": "mural"
+              },
+              {
+                "question": "¿Cuántos metros de altura mide exactamente la Tokyo Skytree, visible desde todo Asakusa?",
+                "answer": "La Tokyo Skytree mide 634 metros de altura. Este número no es aleatorio: se puede leer en japonés como 'Mu-sa-shi', el nombre de la antigua provincia donde se encuentra Tokio.",
+                "password": "634"
+              },
+              {
+                "question": "¿Para qué usan los locales el humo del gran incensario (jokoro) que hay frente al templo?",
+                "answer": "Se cree que el humo tiene propiedades curativas. La gente lo dirige hacia partes de su cuerpo que quieren sanar o mejorar (cabeza para la inteligencia, hombros para el dolor, etc.). Es un acto de purificación y bendición.",
+                "password": "curar"
+              },
+              {
+                "question": "¿Con qué apodo se conoce al barrio de Kuramae por su ambiente artesanal y moderno?",
+                "answer": "Se le conoce como el 'Brooklyn de Tokio', por su transformación de una zona de almacenes a un vibrante centro de artesanos, diseñadores y cafeterías con estilo.",
+                "password": "brooklyn"
+              },
+              {
+                "question": "En el Santuario de Asakusa (al lado del templo principal), ¿quiénes son las tres personas a las que se honra y que le dan el apodo de 'Sanja-sama' (Santuario de los Tres Espíritus)?",
+                "answer": "Se honra a los dos hermanos pescadores, Hinokuma Hamanari y Hinokuma Takenari, que encontraron la estatua de Kannon, y al erudito Hajino Nakatomo, que reconoció su santidad y consagró la estatua, fundando así el templo.",
+                "password": "tres"
               }
             ],
             "restaurants": [
               {
-                "name": "Asakusa Kagetsudo",
-                "type": "Snack / Dulce",
-                "priceRange": "$",
-                "specialty": "Famosos por su 'Jumbo Melon-pan' (un pan dulce y esponjoso) que a menudo se sirve con helado de matcha.",
-                "walkTime": "3 min desde Sensō-ji",
-                "notes": "Ideal para una merienda. Suele haber cola, pero avanza rápido."
-              },
-              {
-                "name": "Daikokuya Tempura",
-                "type": "Tempura",
+                "name": "Asakusa Gyukatsu",
+                "type": "Gyukatsu (chuleta de ternera empanada)",
                 "priceRange": "$$",
-                "specialty": "Tendon (bol de arroz con tempura encima) servido con una salsa oscura y dulce, receta de 1887.",
-                "walkTime": "5 min desde Sensō-ji",
-                "notes": "Estilo de tempura muy tradicional, puede ser diferente al que se conoce fuera de Japón. Reserva recomendada."
+                "specialty": "Te sirven una chuleta de ternera poco hecha que terminas de cocinar a tu gusto en una pequeña parrilla de piedra individual. Una experiencia interactiva y deliciosa.",
+                "walkTime": "6 min desde Sensō-ji",
+                "notes": "Opción moderna y muy popular. Suele tener cola, pero la experiencia es única para empezar el viaje."
               },
               {
-                "name": "Asakusa Unatetsu",
-                "type": "Unagi (Anguila)",
-                "priceRange": "$$$",
-                "specialty": "Hitsumabushi, un plato de anguila a la parrilla servido sobre arroz que se disfruta de tres maneras diferentes.",
-                "walkTime": "4 min desde Sensō-ji",
-                "notes": "Una experiencia gastronómica de alta calidad para una primera noche especial."
+                  "name": "Daikokuya Tempura",
+                  "type": "Tempura (Tendon)",
+                  "priceRange": "$$",
+                  "specialty": "Un clásico desde 1887. Su tendon (bol de arroz con tempura) es famoso por su salsa oscura y dulce. Es un sabor muy tradicional de la era Edo.",
+                  "walkTime": "5 min desde Sensō-ji",
+                  "notes": "Lugar histórico. Prepárate para una posible larga espera. Su tempura es más blanda que crujiente, ¡una experiencia auténtica!"
+              },
+              {
+                "name": "Ramen Yoroiya",
+                "type": "Ramen",
+                "priceRange": "$",
+                "specialty": "Un ramen de estilo clásico de Tokio con base de salsa de soja (shoyu). Famosos por usar fideos con yuzu (un cítrico japonés) que le da un toque refrescante.",
+                "walkTime": "2 min desde Sensō-ji",
+                "notes": "La opción rápida, reconfortante y económica. Ideal si el grupo está cansado y no quiere esperas."
               }
             ],
             "practicalInfo": {
-              "bestTime": "Tarde (16:00-19:00) para ver la transición del día a la noche y la iluminación de los templos.",
-              "crowdLevel": "high",
-              "duration": "3-4 horas",
-              "weather": "Mayormente al aire libre, pero las tiendas ofrecen refugio si llueve.",
-              "tips": ["Lleva calzado cómodo, será el primer día después de un largo vuelo.", "Ten algo de efectivo para los pequeños puestos de comida y souvenirs de Nakamise-dori.", "No te pierdas el mirador del Centro de Información Turística, ¡es gratis y las vistas son espectaculares!"]
-            }
+              "bestTime": "Tarde-noche. Permite ver las tiendas de Kuramae y luego disfrutar de la tranquilidad y la iluminación de Sensō-ji.",
+              "crowdLevel": "medium",
+              "duration": "4-5 horas (ritmo tranquilo)",
+              "weather": "Mayormente al aire libre. Un paraguas es útil si hay previsión de lluvia.",
+              "tips": ["Lleva calzado muy cómodo, será la primera caminata tras el vuelo.", "No te preocupes si llegas tarde a Sensō-ji, la experiencia nocturna es única.", "Usa una tarjeta Suica/Pasmo para el metro desde el aeropuerto, la podrás recargar y usar durante todo el viaje."]
+            },
+            "easterEggs": [
+              {
+                "type": "hunt",
+                "title": "Los Guardianes de Paja Gigantes",
+                "description": "Encuentra las enormes sandalias de paja ('waraji') que cuelgan en una de las puertas interiores del templo (la Puerta Hozomon). Miden 4.5 metros de alto y pesan 500 kg cada una. Son ofrendas de un pueblo de la prefectura de Yamagata para pedir protección para las piernas y los viajes.",
+                "hint": "No están en la primera puerta (Kaminarimon), sino en la segunda, justo antes del salón principal.",
+                "category": "Simbología Protectora",
+                "reward": "Una foto increíble y el conocimiento de una tradición de ofrendas única.",
+                "difficulty": "medium"
+              },
+              {
+                "type": "reference",
+                "title": "Territorio de Demonios en Asakusa",
+                "description": "Pasea por las calles de Asakusa, que sirvieron de inspiración para el escenario del primer encuentro de Tanjiro con el villano Muzan Kibutsuji en el popular anime 'Kimetsu no Yaiba (Demon Slayer)'. Intenta encontrar callejones que te transporten a la era Taisho que se recrea en la serie.",
+                "hint": "La zona oeste del templo, hacia 'Hoppy Dori', tiene el ambiente más parecido al del anime.",
+                "category": "Cultura Pop / Anime",
+                "reward": "Revivir una escena icónica y ver la conexión entre el Japón moderno y su representación en la ficción.",
+                "difficulty": "easy"
+              },
+              {
+                "type": "cultural",
+                "title": "El Ritual del Omikuji",
+                "description": "Por 100¥, puedes probar suerte con el 'Omikuji', un oráculo de la fortuna. Agita una caja metálica hasta que caiga un palito con un número, busca ese número en los cajones y coge tu papel. Si la fortuna es mala (凶), ¡no te la lleves! Átala en las cuerdas designadas para dejar la mala suerte atrás.",
+                "hint": "Observa cómo lo hacen los locales antes de intentarlo tú. Es una experiencia muy auténtica.",
+                "category": "Tradiciones Budistas",
+                "reward": "Un pronóstico para tu viaje y un souvenir (si la fortuna es buena).",
+                "difficulty": "easy"
+              },
+              {
+                "type": "photo-challenge",
+                "title": "El Contraste de Eras",
+                "description": "Encuentra el punto exacto desde donde puedes enmarcar la pagoda de cinco pisos de Sensō-ji en un lado de la foto y la moderna Tokyo Skytree en el otro, capturando más de mil años de historia de Tokio en una sola imagen.",
+                "hint": "No está dentro del patio principal. Prueba desde las calles laterales al este del templo, o desde el puente Azumabashi.",
+                "category": "Fotografía Arquitectónica",
+                "reward": "La foto más emblemática del contraste entre el Tokio tradicional y el futurista.",
+                "difficulty": "medium"
+              },
+              {
+                "type": "secret",
+                "title": "El callejón de los Hoppy",
+                "description": "Al oeste del templo Sensō-ji se encuentra 'Hoppy Dori', una calle llena de izakayas (tabernas) al aire libre con farolillos rojos. Es mucho más auténtica que los restaurantes turísticos. Su nombre viene de 'Hoppy', una bebida similar a la cerveza baja en alcohol que se mezcla con shochu.",
+                "hint": "Busca una calle con mesas y sillas en el exterior y un ambiente muy animado por la noche.",
+                "category": "Gemas Ocultas",
+                "reward": "Una cena y bebida auténticamente tokiota, rodeado de locales.",
+                "difficulty": "easy"
+              },
+              {
+                "type": "discovery",
+                "title": "Las Carpas Sagradas de Demboin",
+                "description": "Aunque los jardines Demboin suelen estar cerrados al público, si te asomas por el muro de la calle Demboin-dori (al oeste de Nakamise), podrás ver un estanque. Si tienes paciencia y suerte, podrás ver las enormes y coloridas carpas koi que viven allí. Son consideradas un símbolo de suerte y perseverancia.",
+                "hint": "Busca un muro tradicional japonés con tejas grises y una pequeña puerta de madera.",
+                "category": "Folclore y Naturaleza",
+                "reward": "Un momento de paz y un avistamiento que muchos turistas se pierden.",
+                "difficulty": "hard"
+              }
+            ]
           }
         },
         {

@@ -12,6 +12,7 @@ Una aplicación web desarrollada en Vue 3 para mostrar itinerarios de viaje de f
 - **Restaurantes recomendados** con precios y especialidades
 - **Actividades adicionales** categorizadas por tipo
 - **Datos curiosos y trivia** para enriquecer la experiencia
+- **🆕 Easter eggs y desafíos interactivos** para exploración activa
 - **Diseño responsive** optimizado para móviles
 - **Persistencia de selecciones** con localStorage
 - **Gestión de estado** con Pinia
@@ -29,7 +30,8 @@ src/
 │   ├── TransportSection.vue   # Información de transporte detallada
 │   ├── RestaurantsSection.vue # Restaurantes recomendados
 │   ├── NearbyActivitiesSection.vue # Actividades adicionales
-│   └── TriviaSection.vue      # Datos curiosos y trivia
+│   ├── TriviaSection.vue      # Datos curiosos y trivia
+│   └── EasterEggsSection.vue  # 🆕 Easter eggs y desafíos interactivos
 ├── stores/
 │   └── itinerary.ts           # Store de Pinia para gestión de estado
 ├── types/
@@ -181,9 +183,16 @@ Para crear páginas de detalles completas, puedes añadir un objeto `dayDetails`
       ]
     },
     "trivia": [
-      "El templo fue fundado en el año 628 DC",
-      "La calle Nakamise tiene más de 300 años de antigüedad",
-      "El barrio de Asakusa era el centro de entretenimiento durante el período Edo"
+      {
+        "question": "¿En qué año fue fundado el templo Sensō-ji?",
+        "answer": "El templo fue fundado en el año 628 DC por dos hermanos pescadores que encontraron una estatua de Kannon en el río Sumida.",
+        "password": "628"
+      },
+      {
+        "question": "¿Cuántos años de antigüedad tiene la calle comercial Nakamise?",
+        "answer": "La calle Nakamise tiene más de 300 años de antigüedad y es una de las calles comerciales más antiguas de Japón.",
+        "password": "nakamise"
+      }
     ],
     "nearbyActivities": [
       {
@@ -210,7 +219,27 @@ Para crear páginas de detalles completas, puedes añadir un objeto `dayDetails`
       "duration": "2-3 horas",
       "weather": "Mayormente al aire libre",
       "tips": ["Lleva efectivo", "Respeta las normas del templo", "Fotografía permitida en exteriores"]
-    }
+    },
+    "easterEggs": [
+      {
+        "type": "hunt",
+        "title": "La Búsqueda de los Kitsune",
+        "description": "Encuentra todas las estatuas de zorros (kitsune) escondidas en el complejo del templo. Hay al menos 7 estatuas en diferentes edificios secundarios.",
+        "hint": "Los zorros guardianes suelen estar cerca de santuarios secundarios",
+        "category": "Exploración Cultural",
+        "reward": "Una comprensión más profunda del simbolismo sintoísta japonés",
+        "difficulty": "medium"
+      },
+      {
+        "type": "photo-challenge",
+        "title": "La Perspectiva Perfecta",
+        "description": "Captura el farolillo gigante desde tres ángulos únicos: desde abajo, desde el mirador, y como marco de la calle comercial.",
+        "hint": "La madrugada y última hora ofrecen menos multitudes",
+        "category": "Fotografía",
+        "reward": "Un tríptico fotográfico único",
+        "difficulty": "hard"
+      }
+    ]
   }
 }
 ```
@@ -238,7 +267,10 @@ Información detallada de transporte:
   - `notes`: Notas adicionales (opcional)
 
 #### `trivia` (opcional)
-Array de datos curiosos y información interesante sobre el día/lugar.
+Array de preguntas interactivas con respuestas protegidas por contraseña:
+- `question`: Pregunta visible para los viajeros
+- `answer`: Respuesta detallada que se revela tras la contraseña correcta
+- `password`: Palabra clave que deben encontrar en el lugar (insensible a mayúsculas)
 
 #### `nearbyActivities` (opcional)
 Array de actividades adicionales "de paso":
@@ -264,6 +296,16 @@ Información práctica:
 - `duration`: Duración recomendada (opcional)
 - `weather`: Información sobre si es interior/exterior (opcional)
 - `tips`: Array de consejos útiles (opcional)
+
+#### 🆕 `easterEggs` (opcional)
+Array de Easter eggs y desafíos interactivos para fomentar la exploración activa:
+- `type`: Tipo de Easter egg - "hunt", "reference", "cultural", "photo-challenge", "secret", "discovery"
+- `title`: Título del desafío
+- `description`: Descripción detallada del Easter egg
+- `hint`: Pista para encontrar/completar el desafío (opcional)
+- `category`: Categoría descriptiva (opcional)
+- `reward`: Descripción de la "recompensa" por completar el desafío (opcional)
+- `difficulty`: Nivel de dificultad - "easy", "medium", "hard" (opcional)
 
 ### Estados de Día Disponibles
 
@@ -378,6 +420,227 @@ Añade `dayDetails` a opciones específicas:
 - **Información práctica**: Incluye siempre horarios, precios y consejos útiles
 - **Categorización clara**: Usa las categorías predefinidas para actividades
 - **Detalles progresivos**: Empieza con información básica y añade detalles gradualmente
+
+## 🧠 Trivia Interactiva con Contraseñas
+
+### Nueva Funcionalidad de Trivia
+
+La sección de trivia ha sido completamente renovada para convertirse en un juego interactivo durante el viaje. En lugar de mostrar datos curiosos estáticos, ahora presenta **preguntas con respuestas protegidas por contraseña**.
+
+### Mecánica de Juego
+
+#### Pregunta → Contraseña → Respuesta
+1. **Pregunta visible**: Se muestra la pregunta completa para todos los viajeros
+2. **Búsqueda de contraseña**: Los viajeros deben encontrar la respuesta en el lugar visitado
+3. **Desbloqueo**: Al introducir la contraseña correcta, se revela la respuesta detallada
+4. **Aprendizaje activo**: Fomenta la exploración y observación durante el viaje
+
+#### Estructura de Datos para Trivia
+
+```json
+{
+  "trivia": [
+    {
+      "question": "¿Cuál era el papel histórico de Asakusa durante el período Edo?",
+      "answer": "Asakusa era el principal distrito de entretenimiento de Tokio durante el Período Edo. Aquí se concentraban teatros, casas de té, restaurantes y todo tipo de espectáculos para el pueblo.",
+      "password": "edo"
+    },
+    {
+      "question": "¿Qué pasó con el área de Asakusa durante la Segunda Guerra Mundial?",
+      "answer": "A pesar de su aspecto antiguo, gran parte del área fue reconstruida después de los bombardeos de la Segunda Guerra Mundial. El templo Sensō-ji y muchos edificios fueron destruidos y luego reconstruidos como símbolo de paz y renacimiento.",
+      "password": "paz"
+    }
+  ]
+}
+```
+
+#### Campos de TriviaItem
+- `question`: La pregunta que se muestra a los viajeros
+- `answer`: Respuesta detallada que se revela tras introducir la contraseña
+- `password`: Palabra clave que los viajeros deben encontrar (insensible a mayúsculas/minúsculas)
+
+### Experiencia de Usuario en Trivia
+
+#### Interacción
+- **Campo de entrada**: Input para introducir la contraseña encontrada
+- **Validación**: Comprobación automática al pulsar Enter o botón "Revelar"
+- **Feedback**: Mensaje de error si la contraseña es incorrecta  
+- **Revelación**: La respuesta aparece en un área destacada con posibilidad de ocultar
+
+#### Diseño Visual
+- **Preguntas destacadas**: Texto prominente para facilitar la lectura
+- **Respuestas diferenciadas**: Área especial con fondo de color para las respuestas reveladas
+- **Responsive**: Adaptado para móviles con botones apilados
+
+### Buenas Prácticas para Trivia
+
+#### Diseño de Preguntas
+- **Específicas del lugar**: Relacionadas directamente con lo que están visitando
+- **Observables**: Las respuestas deben ser encontrables en el sitio
+- **Educativas**: Que aporten valor cultural o histórico real
+
+#### Contraseñas Efectivas
+- **Simples**: Una sola palabra o concepto clave
+- **Visibles**: Deben estar en carteles, placas informativas o elementos del lugar
+- **Relevantes**: Relacionadas directamente con la respuesta
+- **Variadas**: Diferentes tipos (fechas, nombres, conceptos)
+
+#### Respuestas Enriquecidas
+- **Contexto amplio**: Más información que solo la básica
+- **Conexiones**: Relaciones con otros aspectos del viaje
+- **Datos interesantes**: Detalles que enriquecen la experiencia
+
+## 🥚 Easter Eggs y Desafíos Interactivos
+
+### ¿Qué son los Easter Eggs?
+
+Los Easter eggs son elementos interactivos especiales que transforman la experiencia de viaje de pasiva a activa. En lugar de simplemente visitar lugares, los viajeros participan en búsquedas, desafíos y descubrimientos que profundizan su conexión con la cultura local.
+
+### Tipos de Easter Eggs
+
+#### 🔍 `hunt` - Búsquedas y Cazas del Tesoro
+Desafíos que requieren encontrar elementos específicos en ubicaciones:
+```json
+{
+  "type": "hunt",
+  "title": "La Búsqueda de los Kitsune",
+  "description": "Encuentra todas las estatuas de zorros (kitsune) escondidas en el complejo del templo...",
+  "hint": "Los zorros guardianes suelen estar cerca de santuarios secundarios",
+  "category": "Exploración Cultural",
+  "difficulty": "medium"
+}
+```
+
+#### 🎬 `reference` - Referencias Culturales
+Conexiones con anime, películas, libros o elementos de cultura pop:
+```json
+{
+  "type": "reference", 
+  "title": "Escenario de Your Name",
+  "description": "El río Sumida aparece en varias escenas de la película anime 'Your Name'...",
+  "hint": "El puente Azumabashi ofrece la vista más cinematográfica",
+  "category": "Cultura Pop",
+  "difficulty": "easy"
+}
+```
+
+#### 🏛️ `cultural` - Inmersión Cultural
+Actividades que enseñan tradiciones, rituales o costumbres locales:
+```json
+{
+  "type": "cultural",
+  "title": "El Ritual Correcto del Incienso", 
+  "description": "Observa y practica cómo los locales realizan el ritual del incienso...",
+  "hint": "Observa a los ancianos locales, ellos conocen la técnica perfecta",
+  "category": "Tradiciones Religiosas",
+  "difficulty": "easy"
+}
+```
+
+#### 📸 `photo-challenge` - Desafíos Fotográficos
+Retos específicos de fotografía que capturan perspectivas únicas:
+```json
+{
+  "type": "photo-challenge",
+  "title": "La Perspectiva Perfecta del Farolillo",
+  "description": "Captura el farolillo gigante desde tres ángulos únicos...",
+  "hint": "La madrugada y última hora ofrecen menos multitudes",
+  "category": "Fotografía",
+  "difficulty": "hard"
+}
+```
+
+#### 🤫 `secret` - Secretos y Gemas Ocultas
+Lugares, tiendas o experiencias no turísticas que requieren búsqueda:
+```json
+{
+  "type": "secret",
+  "title": "El Sake Secreto de Kuramae",
+  "description": "Una pequeña tienda de sake escondida que no aparece en guías turísticas...",
+  "hint": "Busca el noren azul marino con caracteres kanji dorados",
+  "category": "Gemas Ocultas",
+  "difficulty": "hard"
+}
+```
+
+#### ✨ `discovery` - Descubrimientos Únicos
+Encuentros especiales con folclore local, historia o fenómenos naturales:
+```json
+{
+  "type": "discovery",
+  "title": "Los Gatos Guardianes de Asakusa",
+  "description": "Encuentra al gato calicó 'Mamoru-chan' que aparece siempre a las 18:00...",
+  "hint": "Busca cerca de las estatuas de Jizō con baberos rojos",
+  "category": "Folclore Local", 
+  "difficulty": "medium"
+}
+```
+
+### Experiencia del Usuario
+
+#### Contenido Siempre Visible
+- **Información completa**: Los Easter eggs muestran toda la información de inmediato
+- **Descripción detallada**: Incluye el desafío completo con categoría y recompensa
+- **Pista adicional**: Se muestra como comentario extra para ayudar en la búsqueda
+- **Sin interacción requerida**: Todo el contenido es accesible directamente
+
+#### Sistema de Dificultad
+- **🟢 Easy**: Desafíos accesibles para todos los viajeros
+- **🟡 Medium**: Requieren algo de exploración o tiempo adicional  
+- **🔴 Hard**: Desafíos complejos que requieren dedicación especial
+
+#### Categorización Temática
+- **Exploración Cultural**: Conexión profunda con tradiciones locales
+- **Cultura Pop**: Referencias a anime, películas y entretenimiento
+- **Fotografía**: Desafíos visuales y perspectivas únicas
+- **Tradiciones Religiosas**: Participación en rituales y costumbres
+- **Gemas Ocultas**: Lugares secretos fuera del turismo convencional
+- **Folclore Local**: Historias y leyendas de la zona
+
+### Implementación en el JSON
+
+Los Easter eggs se añaden al objeto `dayDetails` como un array opcional:
+
+```json
+{
+  "dayDetails": {
+    "keyPlaces": [...],
+    "transport": {...},
+    "trivia": [...],
+    "easterEggs": [
+      {
+        "type": "hunt|reference|cultural|photo-challenge|secret|discovery",
+        "title": "Título del desafío",
+        "description": "Descripción detallada del Easter egg",
+        "hint": "Pista opcional para ayudar al usuario",
+        "category": "Categoría descriptiva opcional",
+        "reward": "Descripción de la recompensa opcional",
+        "difficulty": "easy|medium|hard (opcional)"
+      }
+    ]
+  }
+}
+```
+
+### Buenas Prácticas para Easter Eggs
+
+#### Contenido
+- **Específicos y localizados**: Cada Easter egg debe ser único para su ubicación
+- **Culturalmente auténticos**: Basados en información real y verificable
+- **Balanceados en dificultad**: Mezcla de fáciles, medios y difíciles
+- **Recompensas significativas**: Que aporten valor real a la experiencia
+
+#### Redacción
+- **Títulos atractivos**: Que generen curiosidad sin revelar todo
+- **Descripciones detalladas**: Suficiente información para completar el desafío
+- **Pistas útiles**: Que guíen sin quitar la diversión del descubrimiento
+- **Lenguaje motivador**: Que inspire a la acción y exploración
+
+#### Diseño de la Experiencia
+- **2-4 Easter eggs por día**: No saturar la experiencia
+- **Variedad de tipos**: Mezclar diferentes categorías y dificultades
+- **Conexión con el itinerario**: Que complementen las actividades principales
+- **Tiempo realista**: Que sean factibles dentro del horario del día
 
 ## 🧭 Navegación y Experiencia de Usuario
 

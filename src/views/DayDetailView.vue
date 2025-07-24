@@ -8,6 +8,7 @@ import TransportSection from '@/components/TransportSection.vue'
 import RestaurantsSection from '@/components/RestaurantsSection.vue'
 import NearbyActivitiesSection from '@/components/NearbyActivitiesSection.vue'
 import TriviaSection from '@/components/TriviaSection.vue'
+import EasterEggsSection from '@/components/EasterEggsSection.vue'
 
 const route = useRoute()
 const router = useRouter()
@@ -158,6 +159,12 @@ onMounted(() => {
       <TriviaSection
         v-if="dayDetails.trivia && dayDetails.trivia.length > 0"
         :trivia="dayDetails.trivia"
+        :borderColor="displayData.borderColor"
+      />
+      
+      <EasterEggsSection
+        v-if="dayDetails.easterEggs && dayDetails.easterEggs.length > 0"
+        :easterEggs="dayDetails.easterEggs"
         :borderColor="displayData.borderColor"
       />
       

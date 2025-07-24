@@ -66,13 +66,30 @@ export interface PracticalInfo {
   tips?: string[]
 }
 
+export interface EasterEgg {
+  type: 'hunt' | 'reference' | 'cultural' | 'photo-challenge' | 'secret' | 'discovery'
+  title: string
+  description: string
+  hint?: string
+  category?: string
+  reward?: string
+  difficulty?: 'easy' | 'medium' | 'hard'
+}
+
+export interface TriviaItem {
+  question: string
+  answer: string
+  password: string
+}
+
 export interface DayDetails {
   keyPlaces?: KeyPlace[]
   transport?: Transport
-  trivia?: string[]
+  trivia?: TriviaItem[]
   nearbyActivities?: NearbyActivity[]
   restaurants?: Restaurant[]
   practicalInfo?: PracticalInfo
+  easterEggs?: EasterEgg[]
 }
 
 export interface DayOption {
