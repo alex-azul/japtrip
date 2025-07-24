@@ -25,14 +25,15 @@ export const useItineraryStore = defineStore('itinerary', () => {
     isLoading.value = true
     error.value = null
     try {
-      const response = await fetch('/itinerario.json') // Assumes JSON is in the public folder
-      if (!response.ok) throw new Error('Network response was not ok.')
+      // Use relative path that works with GitHub Pages
+      const response = await fetch('./itinerario.json')
+      if (!response.ok) throw new Error(`Network response was not ok: ${response.status}`)
 
       const data: Itinerary = await response.json()
       itinerary.value = data
     } catch (e) {
-      error.value = 'Failed to load itinerary data.'
-      console.error(e)
+      error.value = `Failed to load itinerary data: ${e instanceof Error ? e.message : 'Unknown error'}`
+      console.error('Error fetching itinerary:', e)
     } finally {
       isLoading.value = false
     }
