@@ -1,6 +1,6 @@
 {
-  "tituloViaje": "Japón 2024",
-  "subtituloViaje": "Itinerario Propuesto · 14 Noches, 13 Días",
+  "tituloViaje": "Japón 2025",
+  "subtituloViaje": "Itinerario Propuesto · 12 Noches, 13 Días",
   "ciudades": [
     {
       "id": "tokio",
@@ -28,13 +28,13 @@
           ]
         },
         {
-          "titulo": "Día 2: Santuarios y Neones",
+          "titulo": "Día 2: Santuarios, Neones e Ikebukuro",
           "fecha": "30 Nov",
           "status": [{ "texto": "Fijo", "clase": "status-fijo" }],
           "puntosClave": [
             { "icono": "⛩️", "titulo": "Santuario Meiji & Harajuku", "descripcion": "Pasamos de la solemnidad del santuario más importante de Tokio al epicentro de la moda juvenil." },
-            { "icono": "🏙️", "titulo": "Mirador del Tochō (Shinjuku)", "descripcion": "Subida gratuita a los rascacielos del gobierno metropolitano para vistas espectaculares." },
-            { "icono": "🍜", "titulo": "Omoide Yokocho & Golden Gai", "descripcion": "Terminamos el día cenando en callejones de la posguerra y explorando los diminutos bares de Golden Gai." }
+            { "icono": "🏙️", "titulo": "Shinjuku & Mirador Tochō", "descripcion": "Vistas gratis desde los rascacielos del gobierno metropolitano, seguido de Omoide Yokocho." },
+            { "icono": "🎮", "titulo": "Ikebukuro (Sunshine 60 & Pokémon Center)", "descripcion": "Atardecer panorámico y compras frikis antes de cerrar la noche en Golden Gai." }
           ]
         },
         {
@@ -74,99 +74,86 @@
           ]
         },
         {
-            "titulo": "Día 6: La Magia de Arashiyama",
-            "fecha": "4 Dic",
-            "status": [{ "texto": "Fijo", "clase": "status-fijo" }],
-            "puntosClave": [
-              { "icono": "🎍", "titulo": "Bosque de Bambú de Sagano", "descripcion": "Madrugamos para caminar por este icónico pasaje antes de que lleguen las multitudes." },
-              { "icono": "🐒", "titulo": "Monkey Park Iwatayama", "descripcion": "Subimos una pequeña colina para obtener vistas increíbles de Kioto y estar rodeados de macacos japoneses." },
-              { "icono": "🗿", "titulo": "Templo Otagi Nenbutsu-ji", "descripcion": "Terminamos en una joya oculta: un templo con 1200 estatuas de piedra, cada una con una expresión única." }
-            ]
+          "titulo": "Día 6: Arashiyama y el Norte Dorado",
+          "fecha": "4 Dic",
+          "status": [{ "texto": "Fijo", "clase": "status-fijo" }],
+          "puntosClave": [
+            { "icono": "🎍", "titulo": "Bosque de Bambú de Sagano", "descripcion": "Madrugamos para caminar por este icónico pasaje antes de que lleguen las multitudes." },
+            { "icono": "🐒", "titulo": "Monkey Park Iwatayama", "descripcion": "Subimos una colina con vistas increíbles de Kioto rodeados de macacos japoneses." },
+            { "icono": "🌟", "titulo": "Kinkaku-ji & Ryōan-ji", "descripcion": "Por la tarde visitamos el Pabellón Dorado reflejado en su estanque y el famoso jardín zen." }
+          ]
         },
         {
-            "titulo": "Día 7: Ruta de los Iconos",
-            "fecha": "5 Dic",
-            "status": [{ "texto": "Fijo", "clase": "status-fijo" }],
-            "puntosClave": [
-              { "icono": "⛩️", "titulo": "Fushimi Inari-Taisha", "descripcion": "Recorremos los miles de torii rojos que serpentean por la montaña. Otra visita para la que madrugar es clave." },
-              { "icono": "⛰️", "titulo": "Templo Kiyomizu-dera", "descripcion": "Visitamos el famoso templo con su balcón de madera y vistas de la ciudad." },
-              { "icono": "🚶", "titulo": "Sannenzaka & Ninenzaka", "descripcion": "Paseamos por las calles históricas mejor conservadas de Kioto, llenas de tiendas y casas de té." }
-            ]
+          "titulo": "Día 7: Excursión a Nara",
+          "fecha": "5 Dic",
+          "status": [{ "texto": "Fijo", "clase": "status-fijo" }],
+          "puntosClave": [
+            { "icono": "🦌", "titulo": "Parque de Nara", "descripcion": "Interactuamos con los ciervos sagrados que campan a sus anchas." },
+            { "icono": "🙏", "titulo": "Tōdai-ji (Gran Buda)", "descripcion": "Visitamos el enorme templo que alberga una estatua de Buda de 15 metros de altura." },
+            { "icono": "🌙", "titulo": "Tarde Flexible en Kioto", "descripcion": "A elegir: iluminaciones Hanatōro, cata de sake en Fushimi o compras en Kyoto Station." }
+          ]
         },
         {
-            "titulo": "Día 8: Oro, Zen y Videojuegos",
-            "fecha": "6 Dic",
-            "status": [{ "texto": "Elección en grupo", "clase": "status-eleccion" }],
-            "puntosClave": [
-              { "icono": "🌟", "titulo": "Kinkaku-ji (Pabellón Dorado)", "descripcion": "Admiramos la belleza de este templo recubierto de pan de oro reflejado en su estanque." },
-              { "icono": "🧘", "titulo": "Ryōan-ji (Jardín Zen)", "descripcion": "Contemplamos el jardín de rocas más famoso del mundo, un ejercicio de meditación y misterio." },
-              { "icono": "🍄", "titulo": "Tarde: Nintendo Museum o Alternativas", "descripcion": "El grupo se divide para visitar el esperado museo de Nintendo o explorar otras zonas como el Paseo del Filósofo." }
-            ]
+          "titulo": "Día 8: Fushimi y Nintendo",
+          "fecha": "6 Dic",
+          "status": [{ "texto": "Elección en grupo", "clase": "status-eleccion" }],
+          "puntosClave": [
+            { "icono": "⛩️", "titulo": "Fushimi Inari-Taisha", "descripcion": "Madrugamos para recorrer los miles de torii rojos que suben la montaña." },
+            { "icono": "🍄", "titulo": "Nintendo Museum (Uji)", "descripcion": "Quienes hayan conseguido entrada visitan el museo dedicado a la historia de Nintendo." },
+            { "icono": "🚶", "titulo": "Alternativa: Paseo del Filósofo / Kurama-Kibune", "descripcion": "Opciones para quienes prefieran naturaleza o cultura tradicional." }
+          ]
         }
       ]
     },
     {
-        "id": "osaka",
-        "nombre": "Osaka: 3 Noches",
-        "colorBorde": "#06D6A0",
-        "dias": [
-          {
-            "titulo": "Día 9: Neón y Street Food",
-            "fecha": "7 Dic",
-            "status": [{ "texto": "Fijo", "clase": "status-fijo" }],
-            "puntosClave": [
-              { "icono": "🐙", "titulo": "Mercado Kuromon & Dōtonbori", "descripcion": "Nos sumergimos en la cultura del \"Kuidaore\" (comer hasta reventar) probando takoyaki, okonomiyaki y más." },
-              { "icono": "🛍️", "titulo": "Shinsaibashi & Amerikamura", "descripcion": "Recorremos la principal arteria comercial y el barrio de la moda alternativa de Osaka." },
-              { "icono": "🏃", "titulo": "Glico Running Man", "descripcion": "Nos hacemos la foto obligatoria con el icónico cartel de neón de Dōtonbori." }
-            ]
-          },
-          {
-            "titulo": "Día 10: Parques y Castillos",
-            "fecha": "8 Dic",
-            "status": [{ "texto": "Split Asegurado", "clase": "status-split" }],
-            "puntosClave": [
-              { "icono": "🎢", "titulo": "Grupo A: Universal Studios Japan", "descripcion": "Día completo de adrenalina y diversión en uno de los mejores parques temáticos del mundo." },
-              { "icono": "🏯", "titulo": "Grupo B: Castillo de Osaka y Shinsekai", "descripcion": "Exploramos el imponente castillo y su historia, y luego viajamos al pasado en el nostálgico barrio de Shinsekai." }
-            ]
-          },
-          {
-            "titulo": "Día 11: Ciervos Sagrados",
-            "fecha": "9 Dic",
-            "status": [
-                { "texto": "Fijo", "clase": "status-fijo" },
-                { "texto": "Kobe Opcional", "clase": "status-opcional" }
-            ],
-            "puntosClave": [
-              { "icono": "🦌", "titulo": "Parque de Nara", "descripcion": "Hacemos una excursión para saludar e interactuar con los cientos de ciervos que campan a sus anchas." },
-              { "icono": "🙏", "titulo": "Tōdai-ji (Gran Buda)", "descripcion": "Visitamos el impresionante templo que alberga una estatua de bronce de Buda de 15 metros de altura." },
-              { "icono": "🥩", "titulo": "Noche Opcional en Kobe", "descripcion": "Los más foodies pueden hacer un viaje rápido para cenar la auténtica y mundialmente famosa ternera de Kobe." }
-            ]
-          }
-        ]
+      "id": "osaka",
+      "nombre": "Osaka: 2 Noches",
+      "colorBorde": "#06D6A0",
+      "dias": [
+        {
+          "titulo": "Día 9: Neón y Street Food",
+          "fecha": "7 Dic",
+          "status": [{ "texto": "Fijo", "clase": "status-fijo" }],
+          "puntosClave": [
+            { "icono": "🐙", "titulo": "Mercado Kuromon & Dōtonbori", "descripcion": "Nos sumergimos en la cultura del \"Kuidaore\" probando takoyaki, okonomiyaki y más." },
+            { "icono": "🛍️", "titulo": "Shinsaibashi & Amerikamura", "descripcion": "Recorremos la principal arteria comercial y el barrio de la moda alternativa de Osaka." },
+            { "icono": "🏯", "titulo": "Parque del Castillo de Osaka", "descripcion": "Paseo por el foso y jardines; el interior museo es opcional." }
+          ]
+        },
+        {
+          "titulo": "Día 10: USJ o Kobe",
+          "fecha": "8 Dic",
+          "status": [{ "texto": "Split Asegurado", "clase": "status-split" }],
+          "puntosClave": [
+            { "icono": "🎢", "titulo": "Grupo A: Universal Studios Japan", "descripcion": "Día completo de adrenalina y diversión en uno de los mejores parques temáticos del mundo." },
+            { "icono": "🥩", "titulo": "Grupo B: Excursión Kobe & Shinsekai", "descripcion": "Los que no van al parque disfrutan wagyū en Kobe y exploran el barrio retro de Shinsekai al volver." }
+          ]
+        }
+      ]
     },
     {
-        "id": "tokio-final",
-        "nombre": "Tokio Final: 1 Noche",
-        "colorBorde": "#118AB2",
-        "dias": [
-            {
-                "titulo": "Día 12: Misión Final",
-                "fecha": "10 Dic",
-                "status": [{ "texto": "Libre", "clase": "status-libre" }],
-                "puntosClave": [
-                    { "icono": "🎁", "titulo": "Ikebukuro y Compras Finales", "descripcion": "Dedicamos la tarde a explorar este gran centro de entretenimiento, perfecto para compras otaku de última hora (Pokémon Center, etc.)." },
-                    { "icono": "🔄", "titulo": "Día Comodín", "descripcion": "Este día sirve para visitar cualquier lugar que haya quedado pendiente o repetir alguno que haya gustado especialmente." }
-                ]
-            },
-            {
-                "titulo": "Día 13: Vuelta a Casa",
-                "fecha": "11 Dic",
-                "status": [{ "texto": "Cerrado", "clase": "status-cerrado" }],
-                "puntosClave": [
-                    { "icono": "✈️", "titulo": "Vuelo 12:35h (Haneda)", "descripcion": "Mañana tranquila para preparar equipaje y dirigirnos al aeropuerto. Fin de una aventura inolvidable." }
-                ]
-            }
-        ]
+      "id": "tokio-final",
+      "nombre": "Tokio Final: 1 Noche",
+      "colorBorde": "#118AB2",
+      "dias": [
+        {
+          "titulo": "Día 11: Misión Final",
+          "fecha": "9 Dic",
+          "status": [{ "texto": "Libre", "clase": "status-libre" }],
+          "puntosClave": [
+            { "icono": "🛍️", "titulo": "Compras Última Hora", "descripcion": "Tarde libre para volver a Akihabara, Ginza o Ikebukuro y cerrar las compras pendientes." },
+            { "icono": "🔄", "titulo": "Día Comodín", "descripcion": "Sirve para visitar cualquier lugar que haya quedado pendiente o repetir alguno que haya gustado especialmente." }
+          ]
+        },
+        {
+          "titulo": "Día 12: Vuelta a Casa",
+          "fecha": "10 Dic",
+          "status": [{ "texto": "Cerrado", "clase": "status-cerrado" }],
+          "puntosClave": [
+            { "icono": "✈️", "titulo": "Vuelo 12:35h (Haneda)", "descripcion": "Mañana tranquila para preparar equipaje y dirigirnos al aeropuerto. Fin de una aventura inolvidable." }
+          ]
+        }
+      ]
     }
   ]
 }
