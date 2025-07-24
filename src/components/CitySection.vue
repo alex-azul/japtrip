@@ -12,10 +12,12 @@ defineProps<{
   <section class="city-section" :id="city.id">
     <h2>{{ city.nombre }}</h2>
     <DayCard
-      v-for="day in city.dias"
+      v-for="(day, index) in city.dias"
       :key="`${city.id}-${day.titulo}`"
       :day="day"
       :border-color="city.colorBorde"
+      :city-id="city.id"
+      :day-index="index"
     />
   </section>
 </template>

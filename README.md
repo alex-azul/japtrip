@@ -7,6 +7,11 @@ Una aplicación web desarrollada en Vue 3 para mostrar itinerarios de viaje de f
 - **Interfaz interactiva** con Vue 3 y Composition API
 - **Opciones de días múltiples** (ej: Día 4A vs Día 4B)
 - **Alternativas de actividades** dentro de cada día
+- **Páginas de detalles extendidas** para cada día con información completa
+- **Información de transporte** detallada con rutas, horarios y costos
+- **Restaurantes recomendados** con precios y especialidades
+- **Actividades adicionales** categorizadas por tipo
+- **Datos curiosos y trivia** para enriquecer la experiencia
 - **Diseño responsive** optimizado para móviles
 - **Persistencia de selecciones** con localStorage
 - **Gestión de estado** con Pinia
@@ -17,18 +22,26 @@ Una aplicación web desarrollada en Vue 3 para mostrar itinerarios de viaje de f
 ```
 src/
 ├── components/
-│   ├── DayCard.vue       # Componente principal de tarjetas de día
-│   ├── CitySection.vue   # Sección de cada ciudad
-│   └── AppHeader.vue     # Cabecera de la aplicación
+│   ├── DayCard.vue            # Componente principal de tarjetas de día (clickeable)
+│   ├── CitySection.vue        # Sección de cada ciudad
+│   ├── AppHeader.vue          # Cabecera de la aplicación
+│   ├── KeyPlacesSection.vue   # Sección de lugares clave detallados
+│   ├── TransportSection.vue   # Información de transporte detallada
+│   ├── RestaurantsSection.vue # Restaurantes recomendados
+│   ├── NearbyActivitiesSection.vue # Actividades adicionales
+│   └── TriviaSection.vue      # Datos curiosos y trivia
 ├── stores/
-│   └── itinerary.ts      # Store de Pinia para gestión de estado
+│   └── itinerary.ts           # Store de Pinia para gestión de estado
 ├── types/
-│   └── itinerary.ts      # Interfaces TypeScript
+│   └── itinerary.ts           # Interfaces TypeScript (extendidas)
+├── router/
+│   └── index.ts               # Configuración de rutas Vue Router
 └── views/
-    └── ItineraryView.vue # Vista principal del itinerario
+    ├── ItineraryView.vue      # Vista principal del itinerario
+    └── DayDetailView.vue      # Vista detallada de cada día
 
 public/
-└── itinerario.json       # Datos del itinerario
+└── itinerario.json            # Datos del itinerario (con soporte extendido)
 ```
 
 ## 📋 Formato del JSON
@@ -135,6 +148,123 @@ El archivo `itinerario.json` soporta múltiples formatos para mayor flexibilidad
 }
 ```
 
+## 🔍 Formato Extendido para Detalles de Día
+
+Para crear páginas de detalles completas, puedes añadir un objeto `dayDetails` a cualquier día u opción de día:
+
+### Estructura de `dayDetails`
+
+```json
+{
+  "dayDetails": {
+    "keyPlaces": [
+      {
+        "name": "Sensō-ji Temple",
+        "description": "El templo más antiguo de Tokio, fundado en el año 628 DC...",
+        "timeSlot": "9:00-11:00",
+        "importance": "must-see",
+        "options": ["Visita matutina temprana", "Iluminación nocturna"],
+        "trivia": ["Sobrevivió a los bombardeos de la Segunda Guerra Mundial", "Recibe más de 30 millones de visitantes al año"]
+      }
+    ],
+    "transport": {
+      "overview": "Principalmente metro y caminata",
+      "routes": [
+        {
+          "from": "Hotel Shibuya",
+          "to": "Sensō-ji Temple",
+          "line": "Ginza Line",
+          "duration": "20 min",
+          "cost": "200¥",
+          "notes": "Salir en Asakusa Station, salida 1"
+        }
+      ]
+    },
+    "trivia": [
+      "El templo fue fundado en el año 628 DC",
+      "La calle Nakamise tiene más de 300 años de antigüedad",
+      "El barrio de Asakusa era el centro de entretenimiento durante el período Edo"
+    ],
+    "nearbyActivities": [
+      {
+        "name": "Nakamise Shopping Street",
+        "description": "Calle tradicional con puestos de snacks y souvenirs",
+        "timeNeeded": "30-45 min",
+        "category": "shopping",
+        "walkTime": "Directamente conectado con el templo"
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Daikokuya Tempura",
+        "type": "tempura",
+        "priceRange": "$$",
+        "specialty": "Tempura tradicional desde 1887",
+        "walkTime": "5 min desde Sensō-ji",
+        "notes": "Reserva recomendada para la cena"
+      }
+    ],
+    "practicalInfo": {
+      "bestTime": "Temprano en la mañana (8-10 AM) o tarde (después de 4 PM)",
+      "crowdLevel": "high",
+      "duration": "2-3 horas",
+      "weather": "Mayormente al aire libre",
+      "tips": ["Lleva efectivo", "Respeta las normas del templo", "Fotografía permitida en exteriores"]
+    }
+  }
+}
+```
+
+### Campos de `dayDetails`
+
+#### `keyPlaces` (opcional)
+Array de lugares clave con información detallada:
+- `name`: Nombre del lugar
+- `description`: Descripción detallada
+- `timeSlot`: Horario recomendado (opcional)
+- `importance`: "must-see", "recommended", o "optional"
+- `options`: Array de opciones o alternativas (opcional)
+- `trivia`: Array de datos curiosos específicos del lugar (opcional)
+
+#### `transport` (opcional)
+Información detallada de transporte:
+- `overview`: Resumen general del transporte
+- `routes`: Array de rutas específicas con:
+  - `from`: Punto de origen
+  - `to`: Destino
+  - `line`: Línea de metro/tren
+  - `duration`: Duración del viaje
+  - `cost`: Costo del trayecto (opcional)
+  - `notes`: Notas adicionales (opcional)
+
+#### `trivia` (opcional)
+Array de datos curiosos y información interesante sobre el día/lugar.
+
+#### `nearbyActivities` (opcional)
+Array de actividades adicionales "de paso":
+- `name`: Nombre de la actividad
+- `description`: Descripción
+- `timeNeeded`: Tiempo necesario
+- `category`: "shopping", "sightseeing", "cultural", "nature", "entertainment"
+- `walkTime`: Tiempo de caminata desde la actividad principal (opcional)
+
+#### `restaurants` (opcional)
+Array de restaurantes recomendados:
+- `name`: Nombre del restaurante
+- `type`: Tipo de cocina
+- `priceRange`: "$", "$$", "$$$", "$$$$"
+- `specialty`: Especialidad del restaurante
+- `walkTime`: Tiempo de caminata (opcional)
+- `notes`: Notas adicionales (opcional)
+
+#### `practicalInfo` (opcional)
+Información práctica:
+- `bestTime`: Mejor horario para visitar (opcional)
+- `crowdLevel`: "low", "medium", "high" (opcional)
+- `duration`: Duración recomendada (opcional)
+- `weather`: Información sobre si es interior/exterior (opcional)
+- `tips`: Array de consejos útiles (opcional)
+
 ### Estados de Día Disponibles
 
 | Clase CSS | Texto Sugerido | Descripción |
@@ -192,6 +322,52 @@ npm run lint
 2. Cada alternativa debe tener `titulo` y `descripcion`
 3. Las alternativas se mostrarán en una sección expandible
 
+### 🆕 Crear Páginas de Detalles Extendidas
+
+#### Opción 1: Detalles a nivel de día
+Añade `dayDetails` directamente al objeto día:
+```json
+{
+  "titulo": "Día 1: Mercados y Vistas",
+  "fecha": "29 Nov",
+  "status": [...],
+  "puntosClave": [...],
+  "dayDetails": {
+    "keyPlaces": [...],
+    "transport": {...},
+    "restaurants": [...],
+    // ... otros campos
+  }
+}
+```
+
+#### Opción 2: Detalles a nivel de opción
+Añade `dayDetails` a opciones específicas:
+```json
+{
+  "titulo": "Día 4: Opciones",
+  "fecha": "2 Dic",
+  "opciones": [
+    {
+      "id": "4a",
+      "label": "4A: Arte",
+      "status": [...],
+      "puntosClave": [...],
+      "dayDetails": {
+        "keyPlaces": [...],
+        "transport": {...},
+        // ... campos específicos para esta opción
+      }
+    }
+  ]
+}
+```
+
+#### Compatibilidad hacia atrás
+- **Los días sin `dayDetails` seguirán funcionando normalmente**
+- **Mostrarán un mensaje indicando que los detalles están "en construcción"**
+- **Puedes añadir detalles gradualmente según sea necesario**
+
 ### Buenas Prácticas
 
 - **IDs únicos**: Usa IDs descriptivos para ciudades y opciones (`tokio`, `4a`, `4b`)
@@ -199,6 +375,27 @@ npm run lint
 - **Iconos relevantes**: Usa emojis descriptivos para cada actividad
 - **Textos concisos**: Mantén títulos cortos y descripciones informativas
 - **Estados coherentes**: Usa los estados predefinidos para consistencia visual
+- **Información práctica**: Incluye siempre horarios, precios y consejos útiles
+- **Categorización clara**: Usa las categorías predefinidas para actividades
+- **Detalles progresivos**: Empieza con información básica y añade detalles gradualmente
+
+## 🧭 Navegación y Experiencia de Usuario
+
+### Funcionalidad Principal
+- **Vista Principal**: Muestra todas las ciudades y días en formato de tarjetas
+- **Tarjetas Clickeables**: Cada día es clickeable y muestra "Ver detalles" al hacer hover
+- **Páginas de Detalle**: Información completa con navegación breadcrumb
+- **Navegación de Vuelta**: Botón para regresar al itinerario principal
+
+### Rutas de la Aplicación
+- `/` - Vista principal del itinerario
+- `/day/:cityId/:dayIndex` - Página de detalle de día
+- `/day/:cityId/:dayIndex/:optionId` - Página de detalle de opción específica
+
+### Estados de Carga
+- **Datos no disponibles**: Mensaje "en construcción" para días sin `dayDetails`
+- **Estados de carga**: Spinner mientras se cargan los datos
+- **Manejo de errores**: Mensajes informativos para errores de carga
 
 ### Ejemplo Completo de Migración
 

@@ -26,6 +26,55 @@ export const useItineraryStore = defineStore('itinerary', () => {
     return (dayKey: string) => selectedDayOptions.value[dayKey]
   })
 
+  // Getter to find a specific day by city ID and day index
+  const getDayByIndex = computed(() => {
+    return (cityId: string, dayIndex: number) => {
+      const city = getCityById.value(cityId)
+      return city?.dias[dayIndex] || null
+    }
+  })
+
+  // Getter to get the active option for a day (either selected or default)
+  const getActiveDayOption = computed(() => {
+    return (cityId: string, dayIndex: number) => {
+      const day = getDayByIndex.value(cityId, dayIndex)
+      if (!day?.opciones) return null
+
+      const dayKey = getDayOptionKey(cityId, dayIndex)
+      const selectedOptionId = selectedDayOptions.value[dayKey]
+      
+      if (selectedOptionId) {
+        return day.opciones.find(opt => opt.id === selectedOptionId) || null
+      }
+      
+      // Return default option or first option
+      return day.opciones.find(opt => opt.isDefault) || day.opciones[0] || null
+    }
+  })
+
+  // Getter to get day details for a specific day/option
+  const getDayDetails = computed(() => {
+    return (cityId: string, dayIndex: number, optionId?: string) => {
+      const day = getDayByIndex.value(cityId, dayIndex)
+      if (!day) return null
+
+      // If optionId is provided, get details from that specific option
+      if (optionId && day.opciones) {
+        const option = day.opciones.find(opt => opt.id === optionId)
+        return option?.dayDetails || null
+      }
+
+      // If day has options but no specific optionId, get from active option
+      if (day.opciones) {
+        const activeOption = getActiveDayOption.value(cityId, dayIndex)
+        return activeOption?.dayDetails || null
+      }
+
+      // Otherwise, get details from the day itself
+      return day.dayDetails || null
+    }
+  })
+
   // --- ACTIONS ---
   async function fetchItinerary() {
     isLoading.value = true
@@ -88,6 +137,9 @@ export const useItineraryStore = defineStore('itinerary', () => {
     cities,
     getCityById,
     getSelectedOption,
+    getDayByIndex,
+    getActiveDayOption,
+    getDayDetails,
     fetchItinerary,
     setDayOption,
     getDayOptionKey,

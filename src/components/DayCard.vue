@@ -1,12 +1,17 @@
 <!-- src/components/DayCard.vue -->
 <script setup lang="ts">
 import { ref, computed } from 'vue'
+import { useRouter } from 'vue-router'
 import type { Day, DayOption } from '@/types/itinerary'
 
 const props = defineProps<{
   day: Day
   borderColor: string
+  cityId: string
+  dayIndex: number
 }>()
+
+const router = useRouter()
 
 const selectedOptionId = ref<string>('')
 
@@ -41,6 +46,23 @@ const selectOption = (optionId: string) => {
   selectedOptionId.value = optionId
 }
 
+const navigateToDetail = () => {
+  const routeParams: any = {
+    cityId: props.cityId,
+    dayIndex: props.dayIndex.toString()
+  }
+  
+  // If there's a selected option or a current option, include it in the route
+  if (hasOptions.value && currentOption.value) {
+    routeParams.optionId = currentOption.value.id
+  }
+  
+  router.push({
+    name: 'day-detail',
+    params: routeParams
+  })
+}
+
 // Initialize with default option
 if (hasOptions.value && !selectedOptionId.value) {
   const defaultOption = props.day.opciones?.find(opt => opt.isDefault)
@@ -53,7 +75,7 @@ if (hasOptions.value && !selectedOptionId.value) {
 </script>
 
 <template>
-  <div class="day-card" :style="{ borderColor: borderColor }">
+  <div class="day-card" :style="{ borderColor: borderColor }" @click="navigateToDetail">
     <div class="day-header">
       <h3>
         {{ day.titulo }} <span class="date">({{ day.fecha }})</span>
@@ -66,6 +88,10 @@ if (hasOptions.value && !selectedOptionId.value) {
         >
           {{ status.texto }}
         </div>
+        <div class="detail-indicator">
+          <span class="detail-text">Ver detalles</span>
+          <span class="detail-arrow">→</span>
+        </div>
       </div>
     </div>
 
@@ -74,7 +100,7 @@ if (hasOptions.value && !selectedOptionId.value) {
       <button
         v-for="option in day.opciones"
         :key="option.id"
-        @click="selectOption(option.id)"
+        @click.stop="selectOption(option.id)"
         :class="['option-tab', { active: selectedOptionId === option.id }]"
       >
         {{ option.label }}
@@ -116,6 +142,7 @@ if (hasOptions.value && !selectedOptionId.value) {
   padding: 1.5rem 2rem;
   margin-bottom: 2rem;
   border-left: 6px solid;
+  cursor: pointer;
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
@@ -124,6 +151,11 @@ if (hasOptions.value && !selectedOptionId.value) {
 .day-card:hover {
   transform: translateY(-8px) scale(1.02);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+}
+
+.day-card:hover .detail-indicator {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .day-header {
@@ -289,5 +321,29 @@ if (hasOptions.value && !selectedOptionId.value) {
   .alternatives {
     padding: 0.75rem;
   }
+}
+
+/* Detail indicator styling */
+.detail-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.3s ease;
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+}
+
+.detail-text {
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.detail-arrow {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--color-accent-primary);
 }
 </style>

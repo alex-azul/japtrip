@@ -9,12 +9,12 @@ const router = createRouter({
       name: 'home',
       component: ItineraryView,
     },
-    // Example of an expandable route for a city detail page
-    // {
-    //   path: '/city/:id',
-    //   name: 'city-details',
-    //   component: () => import('../views/CityDetailView.vue')
-    // }
+    {
+      path: '/day/:cityId/:dayIndex/:optionId?',
+      name: 'day-detail',
+      component: () => import('../views/DayDetailView.vue'),
+      props: true
+    }
   ],
 })
 
