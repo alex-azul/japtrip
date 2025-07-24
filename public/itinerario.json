@@ -1,6 +1,6 @@
 {
   "tituloViaje": "Japón 2025",
-  "subtituloViaje": "Itinerario Propuesto · 12 Noches, 13 Días",
+  "subtituloViaje": "Itinerario Propuesto · 13 Noches, 12 Días",
   "ciudades": [
     {
       "id": "tokio",
@@ -28,13 +28,25 @@
           ]
         },
         {
-          "titulo": "Día 2: Santuarios, Neones e Ikebukuro",
+          "titulo": "Día 2: Cultura Juvenil, Ikebukuro & Neones",
           "fecha": "30 Nov",
           "status": [{ "texto": "Fijo", "clase": "status-fijo" }],
           "puntosClave": [
-            { "icono": "⛩️", "titulo": "Meiji Jingū & Harajuku", "descripcion": "Del santuario más importante al epicentro de la moda juvenil." },
-            { "icono": "🏙️", "titulo": "Shinjuku & Mirador Tochō", "descripcion": "Vistas gratis desde los rascacielos del gobierno metropolitano." },
-            { "icono": "🎮", "titulo": "Ikebukuro (Sunshine 60 & Pokémon Center)", "descripcion": "Atardecer panorámico y compras frikis antes de Golden Gai." }
+            {
+              "icono": "🎮",
+              "titulo": "Ikebukuro (Sunshine 60 & Pokémon Center)",
+              "descripcion": "Tarde friki con vistas desde Sunshine 60. **Saltable** si vamos con prisas: se deja para el día libre final."
+            },
+            {
+              "icono": "⛩️",
+              "titulo": "Meiji Jingū & Harajuku",
+              "descripcion": "De la solemnidad del santuario más importante de Tokio al epicentro de la moda juvenil."
+            },
+            {
+              "icono": "🍜",
+              "titulo": "Shinjuku: Omoide Yokocho & Golden Gai",
+              "descripcion": "Cenamos en callejones de la posguerra y exploramos los diminutos bares de Golden Gai."
+            }
           ]
         },
         {
@@ -68,30 +80,37 @@
           "fecha": "3 Dic",
           "status": [{ "texto": "Fijo", "clase": "status-fijo" }],
           "puntosClave": [
-            { "icono": "🎍", "titulo": "Bosque de Bambú de Sagano", "descripcion": "Madrugamos para caminar entre bambús sin multitudes." },
+            { "icono": "🎍", "titulo": "Bosque de Bambú de Sagano", "descripcion": "Madrugamos para caminar por este icónico pasaje." },
             { "icono": "🐒", "titulo": "Monkey Park Iwatayama", "descripcion": "Vistas de Kioto rodeados de macacos." },
-            { "icono": "🌟", "titulo": "Kinkaku-ji & Ryōan-ji", "descripcion": "Pabellón Dorado y el jardín zen más famoso." }
+            { "icono": "🌟", "titulo": "Kinkaku-ji & Ryōan-ji", "descripcion": "Pabellón Dorado y jardín zen." }
           ]
         },
         {
-          "titulo": "Día 6: Excursión a Nara",
-          "fecha": "4 Dic",
-          "status": [{ "texto": "Fijo", "clase": "status-fijo" }],
-          "puntosClave": [
-            { "icono": "🦌", "titulo": "Parque de Nara", "descripcion": "Saludamos a los ciervos sagrados." },
-            { "icono": "🙏", "titulo": "Tōdai-ji (Gran Buda)", "descripcion": "Templo gigante con un Buda de 15 m." },
-            {
-              "icono": "🌙",
-              "titulo": "Tarde Flexible en Kioto",
-              "descripcion": "Regreso con varias opciones",
-              "alternativas": [
-                { "titulo": "Iluminaciones Hanatōro", "descripcion": "Paseo por templos iluminados (1-10 dic)." },
-                { "titulo": "Cata de Sake en Fushimi", "descripcion": "Visita a destilerías con degustación." },
-                { "titulo": "Compras en Kyoto Station", "descripcion": "Shopping y escalinata LED." }
-              ]
-            }
-          ]
-        },
+            "titulo": "Día 6: Opción Kioto o Excursión Ghibli Park",
+            "fecha": "4 Dic",
+            "opciones": [
+              {
+                "id": "6a",
+                "label": "Opción A: Excursión a Nara",
+                "isDefault": true,
+                "status": [{ "texto": "Elección en grupo", "clase": "status-eleccion" }],
+                "puntosClave": [
+                  { "icono": "🦌", "titulo": "Parque de Nara", "descripcion": "Saludamos a los ciervos sagrados." },
+                  { "icono": "🙏", "titulo": "Tōdai-ji (Gran Buda)", "descripcion": "Templo gigante con Buda de 15 m." },
+                  { "icono": "🌙", "titulo": "Tarde Flexible en Kioto", "descripcion": "Regreso con varias opciones para la tarde-noche."}
+                ]
+              },
+              {
+                "id": "6b",
+                "label": "Opción B: Ghibli Park",
+                "status": [{ "texto": "Alternativa", "clase": "status-alternativa" }],
+                "puntosClave": [
+                  { "icono": "🎢", "titulo": "Excursión a Ghibli Park", "descripcion": "Día completo para visitar el parque temático de Studio Ghibli cerca de Nagoya. Requiere sacrificar el día de Kioto/Nara." },
+                  { "icono": "🚌", "titulo": "Viaje Kioto - Ghibli Park", "descripcion": "El trayecto en tren dura aproximadamente 2 horas y 15 minutos por cada sentido. [11, 30]"}
+                ]
+              }
+            ]
+          },
         {
           "titulo": "Día 7: Fushimi y Nintendo",
           "fecha": "5 Dic",
@@ -129,18 +148,22 @@
           "fecha": "6 Dic",
           "status": [{ "texto": "Fijo", "clase": "status-fijo" }],
           "puntosClave": [
-            { "icono": "🐙", "titulo": "Mercado Kuromon & Dōtonbori", "descripcion": "Nos sumergimos en la cultura del \"Kuidaore\" probando takoyaki, okonomiyaki y más." },
-            { "icono": "🛍️", "titulo": "Shinsaibashi & Amerikamura", "descripcion": "Recorremos la arteria comercial y el barrio de la moda alternativa." },
-            { "icono": "🏯", "titulo": "Parque del Castillo de Osaka", "descripcion": "Foto icónica con el castillo (interior museo opcional)." }
+            { "icono": "🐙", "titulo": "Mercado Kuromon & Dōtonbori", "descripcion": "Cultura \"Kuidaore\": takoyaki, okonomiyaki y más." },
+            { "icono": "🛍️", "titulo": "Shinsaibashi & Amerikamura", "descripcion": "Arteria comercial y barrio de moda alternativa." },
+            { "icono": "🏯", "titulo": "Parque del Castillo de Osaka", "descripcion": "Foto icónica con el castillo (interior opcional)." }
           ]
         },
         {
-          "titulo": "Día 9: USJ o Kobe",
+          "titulo": "Día 9: Parque o Exploración Urbana",
           "fecha": "7 Dic",
           "status": [{ "texto": "Split Asegurado", "clase": "status-split" }],
           "puntosClave": [
             { "icono": "🎢", "titulo": "Grupo A: Universal Studios Japan", "descripcion": "Día completo de adrenalina y diversión." },
-            { "icono": "🥩", "titulo": "Grupo B: Kobe & Shinsekai", "descripcion": "Quienes no van al parque disfrutan wagyū en Kobe y exploran el barrio retro de Shinsekai." }
+            {
+              "icono": "🐠",
+              "titulo": "Grupo B: Osaka Aquarium & Shinsekai",
+              "descripcion": "Mañana en el Kaiyukan y Tempozan Ferris Wheel; tarde retro en Shinsekai con kushikatsu."
+            }
           ]
         }
       ]
@@ -151,36 +174,37 @@
       "colorBorde": "#118AB2",
       "dias": [
         {
-          "titulo": "Día 10: Día Libre en Tokio",
-          "fecha": "8 Dic",
-          "opciones": [
-            {
-              "id": "10a",
-              "label": "10A: Compras Última Hora",
-              "isDefault": true,
-              "status": [{ "texto": "Libre", "clase": "status-libre" }],
-              "puntosClave": [
-                { "icono": "🛍️", "titulo": "Akihabara / Ikebukuro / Ginza", "descripcion": "Ruta de compras finales según gustos del grupo." }
-              ]
-            },
-            {
-              "id": "10b",
-              "label": "10B: Kiyosumi & Bahía",
-              "status": [{ "texto": "Libre", "clase": "status-libre" }],
-              "puntosClave": [
-                { "icono": "☕", "titulo": "Kiyosumi-Shirakawa", "descripcion": "Barrio de cafés third-wave y canales." },
-                { "icono": "🤖", "titulo": "Odaiba – Gundam Base", "descripcion": "Tarde futurista con vistas al Rainbow Bridge y onsen rooftop." }
-              ]
-            }
-          ]
-        },
+            "titulo": "Día 10: Día Libre con Opciones Ghibli/Sumo",
+            "fecha": "8 Dic",
+            "opciones": [
+              {
+                "id": "10a",
+                "label": "10A: Compras / Relax",
+                "isDefault": true,
+                "status": [{"texto": "Libre", "clase": "status-libre"}],
+                "puntosClave": [
+                  {"icono": "🛍️", "titulo": "Compras de Última Hora", "descripcion": "Ruta de compras finales por Akihabara, Ikebukuro o Ginza según gustos."},
+                  {"icono": "☕", "titulo": "Kiyosumi & Bahía", "descripcion": "Alternativa tranquila: barrio de cafés y vistas futuristas desde Odaiba."}
+                ]
+              },
+              {
+                "id": "10b",
+                "label": "10B: Opciones Temáticas",
+                "status": [{"texto": "Alternativa", "clase": "status-alternativa"}],
+                "puntosClave": [
+                  {"icono": "🎨", "titulo": "Ghibli Museum (Mitaka)", "descripcion": "Visita al mágico museo de Studio Ghibli. Requiere reserva con muchísima antelación. Se encuentra en Mitaka, a las afueras de Tokio. [4, 7]"},
+                  {"icono": "💪", "titulo": "Entrenamiento de Sumo", "descripcion": "Madrugar para ver un entrenamiento (keiko) en una heya (establo) de sumo, principalmente en el área de Ryogoku. Suele ser de 7:30 a 9:30. [9, 10]"}
+                ]
+              }
+            ]
+          },
         {
           "titulo": "Día 11: Empaquetar & Despedida",
           "fecha": "9 Dic",
           "status": [{ "texto": "Libre", "clase": "status-libre" }],
           "puntosClave": [
             { "icono": "🎁", "titulo": "Souvenirs & Depachika", "descripcion": "Última ronda de bentō y regalos en los sótanos gourmet de grandes almacenes." },
-            { "icono": "🔄", "titulo": "Plan B de Reserva", "descripcion": "Día colchón para cualquier actividad que se haya cancelado por lluvia." }
+            { "icono": "🔄", "titulo": "Plan B de Reserva", "descripcion": "Día colchón para cualquier actividad que se haya cancelado por lluvia o para repetir algo que haya gustado mucho." }
           ]
         },
         {
