@@ -15,7 +15,110 @@
             { "icono": "🏮", "titulo": "Sensō-ji & Kaminarimon", "descripcion": "Primer impacto con el Japón tradicional en el templo más antiguo de Tokio." },
             { "icono": "🏞️", "titulo": "Paseo por Río Sumida", "descripcion": "Un respiro tranquilo para estirar las piernas tras el vuelo, con vistas del skyline." },
             { "icono": "🛍️", "titulo": "Kuramae Craft Shops", "descripcion": "Exploramos pequeñas tiendas de artesanos. Ideal para un inicio sin prisas." }
-          ]
+          ],
+          "dayDetails": {
+            "keyPlaces": [
+              {
+                "name": "Templo Sensō-ji y Puerta Kaminarimon",
+                "description": "El templo budista más antiguo y significativo de Tokio, dedicado a Kannon, la diosa de la misericordia. La visita comienza cruzando la imponente 'Puerta del Trueno' (Kaminarimon), famosa por su farolillo gigante de 700 kg, para luego recorrer la animada calle Nakamise-dori hasta el salón principal. [12, 14]",
+                "timeSlot": "16:00 - 18:00",
+                "importance": "must-see",
+                "options": ["Visitar de día para el bullicio y las tiendas", "Visitar de noche para ver la iluminación con menos gente"],
+                "trivia": ["La leyenda cuenta que fue fundado en el 628 por dos hermanos que pescaron una estatua de Kannon en el río Sumida. [12]", "El salón principal fue destruido en la Segunda Guerra Mundial y reconstruido como símbolo de paz. [18]"]
+              },
+              {
+                "name": "Paseo por el Parque y Río Sumida",
+                "description": "Un agradable paseo por la orilla del río Sumida, que ofrece un respiro del ajetreo de la ciudad. Es el lugar perfecto para obtener vistas panorámicas de la torre Tokyo Skytree y el peculiar edificio de la cervecería Asahi. [6]",
+                "timeSlot": "18:00 - 18:45",
+                "importance": "recommended",
+                "options": ["Cruzar el puente Azumabashi para fotos", "Tomar un barco-bus para una perspectiva diferente"],
+                "trivia": ["El parque que bordea el río tiene casi 600 cerezos, lo que lo convierte en un lugar espectacular en primavera. [19]", "Desde 2020, se puede caminar por debajo del puente del tren a través del 'Sumida River Walk'. [22]"]
+              },
+              {
+                "name": "Exploración de Kuramae",
+                "description": "Conocido como el 'Brooklyn de Tokio', Kuramae es un barrio de artesanos que ha resurgido con una mezcla de talleres tradicionales y modernas tiendas de diseño, cafeterías y chocolaterías. [25] Ideal para encontrar souvenirs únicos y de calidad.",
+                "timeSlot": "18:45 - 20:00",
+                "importance": "optional",
+                "options": ["Visitar 'Kakimori' para papelería personalizada", "Probar el chocolate 'bean-to-bar' en 'Dandelion Chocolate'"],
+                "trivia": ["Históricamente, la zona albergaba almacenes de arroz para el gobierno durante el período Edo.", "Muchas tiendas son regentadas por jóvenes artesanos que han revitalizado talleres antiguos. [26]"]
+              }
+            ],
+            "transport": {
+              "overview": "El día se centra en el área de Asakusa, por lo que la mayoría de los desplazamientos entre puntos clave se realizan a pie. El trayecto principal será desde el aeropuerto hasta el hotel/zona de Asakusa.",
+              "routes": [
+                {
+                  "from": "Aeropuerto de Haneda (HND)",
+                  "to": "Asakusa Station",
+                  "line": "Keikyu Airport Line (servicio directo a la Toei Asakusa Line)",
+                  "duration": "~45 min",
+                  "cost": "aprox. 650¥",
+                  "notes": "Es la ruta más eficiente, ya que no requiere transbordos. El tren Keikyu se convierte directamente en la línea de metro Asakusa. [3, 11]"
+                },
+                {
+                  "from": "Sensō-ji",
+                  "to": "Kuramae",
+                  "line": "A pie",
+                  "duration": "10-15 min",
+                  "cost": "0¥",
+                  "notes": "Un agradable paseo hacia el sur, siguiendo el río o explorando las calles secundarias."
+                }
+              ]
+            },
+            "trivia": [
+              "Asakusa era el principal distrito de entretenimiento de Tokio durante el Período Edo.",
+              "A pesar de su aspecto antiguo, gran parte del área fue reconstruida después de los bombardeos de la Segunda Guerra Mundial. [18]",
+              "El Sanja Matsuri, uno de los festivales sintoístas más grandes y salvajes de Tokio, se celebra en el Santuario de Asakusa, dentro del recinto de Sensō-ji."
+            ],
+            "nearbyActivities": [
+              {
+                "name": "Calle Comercial Nakamise-dori",
+                "description": "La calle de 250 metros que conduce al templo, llena de puestos que venden desde abanicos y katanas de recuerdo hasta galletas de arroz (senbei) y otros dulces tradicionales. [12]",
+                "timeNeeded": "30-60 min",
+                "category": "shopping",
+                "walkTime": "Estás en ella al entrar a Sensō-ji"
+              },
+              {
+                "name": "Centro de Información Turística y Cultural de Asakusa",
+                "description": "Edificio de arquitectura moderna diseñado por Kengo Kuma. Sube gratis al mirador del 8º piso para una vista fantástica del templo Sensō-ji con la calle Nakamise y el skyline de fondo. [9]",
+                "timeNeeded": "20 min",
+                "category": "sightseeing",
+                "walkTime": "2 min (justo enfrente de la puerta Kaminarimon)"
+              }
+            ],
+            "restaurants": [
+              {
+                "name": "Asakusa Kagetsudo",
+                "type": "Snack / Dulce",
+                "priceRange": "$",
+                "specialty": "Famosos por su 'Jumbo Melon-pan' (un pan dulce y esponjoso) que a menudo se sirve con helado de matcha.",
+                "walkTime": "3 min desde Sensō-ji",
+                "notes": "Ideal para una merienda. Suele haber cola, pero avanza rápido."
+              },
+              {
+                "name": "Daikokuya Tempura",
+                "type": "Tempura",
+                "priceRange": "$$",
+                "specialty": "Tendon (bol de arroz con tempura encima) servido con una salsa oscura y dulce, receta de 1887.",
+                "walkTime": "5 min desde Sensō-ji",
+                "notes": "Estilo de tempura muy tradicional, puede ser diferente al que se conoce fuera de Japón. Reserva recomendada."
+              },
+              {
+                "name": "Asakusa Unatetsu",
+                "type": "Unagi (Anguila)",
+                "priceRange": "$$$",
+                "specialty": "Hitsumabushi, un plato de anguila a la parrilla servido sobre arroz que se disfruta de tres maneras diferentes. [8, 15]",
+                "walkTime": "4 min desde Sensō-ji",
+                "notes": "Una experiencia gastronómica de alta calidad para una primera noche especial."
+              }
+            ],
+            "practicalInfo": {
+              "bestTime": "Tarde (16:00-19:00) para ver la transición del día a la noche y la iluminación de los templos.",
+              "crowdLevel": "high",
+              "duration": "3-4 horas",
+              "weather": "Mayormente al aire libre, pero las tiendas ofrecen refugio si llueve.",
+              "tips": ["Lleva calzado cómodo, será el primer día después de un largo vuelo.", "Ten algo de efectivo para los pequeños puestos de comida y souvenirs de Nakamise-dori.", "No te pierdas el mirador del Centro de Información Turística, ¡es gratis y las vistas son espectaculares!"]
+            }
+          }
         },
         {
           "titulo": "Día 1: Mercados y Vistas 360°",
